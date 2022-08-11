@@ -13,6 +13,49 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 </head>
 <body>
-  
+
+  <main>
+    <div class="calculator">
+      <img class="calculator__logo" src="assets/images/logo.svg" alt="Splitter" width="87" height="54">
+      <div class="calculator__container">
+        <form class="calculator__form" action="#">
+          <label for="bill">Bill</label>
+          <input id="bill" class="input input__form input__form--bill" type="number" name="bill" min="0"
+            placeholder="0">
+          <div class="calculator__tip">
+            <div class="label">Select Tip %</div>
+            <div class="tips-group">
+              <div class="tip">
+                <input id="tip_5" class="input input__radio" type="radio" name="tip">
+                <label for="tip_5">5%</label>
+              </div>
+              <div class="tip">
+                <input id="tip_10" class="input input__radio" type="radio" name="tip">
+                <label for="tip_10">10%</label>
+              </div>
+              <div class="tip">
+                <input id="tip_15" class="input input__radio" type="radio" name="tip">
+                <label for="tip_15">15%</label>
+              </div>
+              <div class="tip">
+                <input id="tip_25" class="input input__radio" type="radio" name="tip">
+                <label for="tip_25">25%</label>
+              </div>
+              <div class="tip">
+                <input id="tip_50" class="input input__radio" type="radio" name="tip">
+                <label for="tip_50">50%</label>
+              </div>
+              <input id="custom" class="input input__form input__form--custom" type="number" name="custom" min="0"
+                placeholder="Custom">
+            </div>
+          </div>
+          <label for="people">Number of People</label>
+          <input id="people" class="input input__form input__form--people" type="number" name="people" min="0"
+            placeholder="0">
+        </form>
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>
