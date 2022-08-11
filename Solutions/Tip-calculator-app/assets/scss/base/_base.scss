@@ -1,0 +1,15 @@
+@use "../abstracts/functions" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  color: color(Dark-grayish-cyan);
+  place-items: center;
+  background-color: color(Light-grayish-cyan);
+}

@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "SpaceMono";
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/Space_Mono/SpaceMono-Bold.ttf);
+}
+
+$fonts: (
+	"Space_Mono": "SpaceMono",
+);
