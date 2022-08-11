@@ -1,0 +1,26 @@
+@use "../abstracts/functions" as *;
+
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0.25rem 0.5rem;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	&--reset {
+		color: color(Very-dark-cyan);
+		width: 100%;
+		font-size: 1.2rem;
+		padding: 0.5rem;
+		background-color: color(Strong-cyan);
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background-color: darken(color(Light-grayish-cyan), 5%);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: auto;
+    }
+	}
+}

@@ -1,15 +1,24 @@
 @use "../abstracts/functions" as *;
 
 .calculator {
-	min-width: 375px;
+	max-width: 375px;
 	&__logo {
 		margin: 2.5rem auto;
 	}
+
 	&__container {
-		padding: 2.2rem 2rem;
+		display: flex;
+		gap: 2rem;
+		padding: 2.2rem 1.5rem;
 		border-radius: 25px;
+		flex-direction: column;
 		background-color: color(White-clr);
 	}
+
+	&__form {
+		padding: 0 0.5rem;
+	}
+
 	&__tip {
 		margin: 2.15rem 0;
 		.tips-group {
@@ -17,6 +26,25 @@
 			gap: 1rem;
 			margin: 1.1rem 0;
 			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__result {
+		color: color(White-clr);
+		padding: 2.5rem 1.5rem 1.5rem;
+		border-radius: 15px;
+		background-color: color(Very-dark-cyan);
+	}
+
+	.row {
+		display: flex;
+		margin-bottom: 2rem;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		&__value {
+			font-size: 2rem;
+			color: color(Strong-cyan);
 		}
 	}
 }
