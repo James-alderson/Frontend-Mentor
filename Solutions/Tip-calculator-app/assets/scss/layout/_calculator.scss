@@ -1,0 +1,22 @@
+@use "../abstracts/functions" as *;
+
+.calculator {
+	min-width: 375px;
+	&__logo {
+		margin: 2.5rem auto;
+	}
+	&__container {
+		padding: 2.2rem 2rem;
+		border-radius: 25px;
+		background-color: color(White-clr);
+	}
+	&__tip {
+		margin: 2.15rem 0;
+		.tips-group {
+			display: grid;
+			gap: 1rem;
+			margin: 1.1rem 0;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

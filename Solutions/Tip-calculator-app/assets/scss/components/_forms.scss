@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "../abstracts/functions" as *;
+
+.input {
+	&__form {
+		width: 100%;
+		color: color(Very-dark-cyan);
+		font-size: 1.5rem;
+		text-align: right;
+		padding: 0.25rem 1rem;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		background-color: color(Very-light-grayish-cyan);
+	}
+	&__form--bill {
+		background: color(Very-light-grayish-cyan)
+			url(../images/icon-dollar.svg) no-repeat 17px 52%;
+	}
+	&__form--people {
+		background: color(Very-light-grayish-cyan)
+			url(../images/icon-person.svg) no-repeat 17px 52%;
+	}
+
+	&__radio {
+		display: none;
+		&:hover + label {
+			color: color(Very-dark-cyan);
+			background-color: darken(color(Light-grayish-cyan), 5%);
+		}
+		&:checked + label {
+			color: color(Very-dark-cyan);
+			background-color: color(Strong-cyan);
+		}
+		+ label {
+			width: 100%;
+			color: color(White-clr);
+			font-size: 1.5rem;
+			text-align: center;
+			padding: 0.65rem;
+			margin: 0;
+			cursor: pointer;
+			user-select: none;
+			border-radius: 5px;
+			background-color: color(Very-dark-cyan);
+		}
+	}
+}
