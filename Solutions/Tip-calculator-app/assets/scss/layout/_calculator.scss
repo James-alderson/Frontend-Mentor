@@ -1,50 +1,160 @@
+@use "sass:color";
 @use "../abstracts/functions" as *;
+@use "../abstracts/breakpoints" as *;
 
 .calculator {
 	max-width: 375px;
+
+	@include respond(sm) {
+		max-width: 500px;
+	}
+	@include respond(md) {
+		max-width: 700px;
+	}
+	@include respond(xl) {
+		max-width: 800px;
+	}
+	@include respond(xxl) {
+		max-width: 920px;
+		margin-top: -5rem;
+	}
+
 	&__logo {
-		margin: 2.5rem auto;
+		margin: 3.1rem auto 2.5rem;
+
+		@include respond(xxl) {
+			margin: 0 auto 5.5rem;
+		}
 	}
 
 	&__container {
 		display: flex;
-		gap: 2rem;
-		padding: 2.2rem 1.5rem;
-		border-radius: 25px;
+		gap: 2rem 1rem;
+		padding: 2.17rem 1.5rem 1.9rem;
 		flex-direction: column;
+		border-radius: 25px 25px 0 0;
 		background-color: color(White-clr);
+		box-shadow: 0 25px 20px 15px darken(color(Light-grayish-cyan), 4px);
+
+		@include respond(sm) {
+			border-radius: 25px;
+		}
+		@include respond(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+			> * {
+				flex: 0 0 calc(50% - 1rem);
+			}
+		}
+		@include respond(xxl) {
+			padding: 2rem;
+		}
 	}
 
 	&__form {
 		padding: 0 0.5rem;
+
+		@include respond(xxl) {
+			padding: 1rem;
+		}
 	}
 
 	&__tip {
-		margin: 2.15rem 0;
+		margin: 2.18rem 0;
+
+		@include respond(xxl) {
+			margin: 2.65rem 0;
+		}
+
 		.tips-group {
 			display: grid;
 			gap: 1rem;
-			margin: 1.1rem 0;
+			margin-top: 1.2rem;
 			grid-template-columns: repeat(2, 1fr);
+
+			@include respond(md) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			@include respond(lg) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@include respond(xxl) {
+				column-gap: 0.9rem;
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 	}
 
 	&__result {
+		display: flex;
 		color: color(White-clr);
-		padding: 2.5rem 1.5rem 1.5rem;
+		padding: 2.6rem 1.35rem 1.5rem 1.5rem;
 		border-radius: 15px;
+		flex-direction: column;
+		justify-content: space-between;
 		background-color: color(Very-dark-cyan);
+
+		@include respond(xxl) {
+			padding: 2.85rem 2.5rem 2.45rem;
+		}
 	}
 
 	.row {
 		display: flex;
-		margin-bottom: 2rem;
+		margin-bottom: 1.8rem;
 		align-items: flex-end;
 		justify-content: space-between;
 
+		@include respond(xxl) {
+			margin-bottom: 2.65rem;
+		}
+
 		&__value {
-			font-size: 2rem;
+			max-width: 170px;
+			font-size: 1.95rem;
 			color: color(Strong-cyan);
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			transform: translateY(-2px);
+
+			@include respond(sm) {
+				max-width: 290px;
+				font-size: 2.5rem;
+			}
+			@include respond(md) {
+				max-width: 490px;
+				font-size: 2.9rem;
+			}
+			@include respond(lg) {
+				max-width: 150px;
+				font-size: 2.2rem;
+			}
+			@include respond(xl) {
+				max-width: 200px;
+				font-size: 2.5rem;
+			}
+			@include respond(xxl) {
+				max-width: 220px;
+				font-size: 2.9rem;
+				transform: translateY(5px);
+			}
+		}
+	}
+
+	.input-container {
+		position: relative;
+	}
+
+	&__error-message {
+		color: color(Error-clr);
+		position: absolute;
+		bottom: -21px;
+		right: 0;
+
+		@include customRespond(360px) {
+			top: 0;
+			bottom: initial;
 		}
 	}
 }

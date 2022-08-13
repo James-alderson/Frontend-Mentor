@@ -27,46 +27,51 @@
             <div class="tips-group">
               <div class="tip">
                 <input id="tip_5" class="input input__radio" type="radio" name="tip">
-                <label for="tip_5">5%</label>
+                <label for="tip_5" tabindex="0" role="button">5%</label>
               </div>
               <div class="tip">
                 <input id="tip_10" class="input input__radio" type="radio" name="tip">
-                <label for="tip_10">10%</label>
+                <label for="tip_10" tabindex="0" role="button">10%</label>
               </div>
               <div class="tip">
                 <input id="tip_15" class="input input__radio" type="radio" name="tip">
-                <label for="tip_15">15%</label>
+                <label for="tip_15" tabindex="0" role="button">15%</label>
               </div>
               <div class="tip">
                 <input id="tip_25" class="input input__radio" type="radio" name="tip">
-                <label for="tip_25">25%</label>
+                <label for="tip_25" tabindex="0" role="button">25%</label>
               </div>
               <div class="tip">
                 <input id="tip_50" class="input input__radio" type="radio" name="tip">
-                <label for="tip_50">50%</label>
+                <label for="tip_50" tabindex="0" role="button">50%</label>
               </div>
               <input id="custom" class="input input__form input__form--custom" type="number" name="custom" min="0"
                 placeholder="Custom">
             </div>
           </div>
-          <label for="people">Number of People</label>
-          <input id="people" class="input input__form input__form--people" type="number" name="people" min="0"
-            placeholder="0">
+          <div class="input-container">
+            <label for="people">Number of People</label>
+            <input id="people" class="input input__form input__form--people input--error" type="number" name="people"
+              min="0" placeholder="0">
+            <div class="calculator__error-message">Can't be zero</div>
+          </div>
         </form>
         <div class="calculator__result">
-          <div class="row">
-            <div>
-              <div>Tip Amount</div>
-              <small>/ person</small>
+          <div class="result-container">
+            <div class="row">
+              <div>
+                <div>Tip Amount</div>
+                <small>/ person</small>
+              </div>
+              <div class="tip-amount row__value">$4.27</div>
             </div>
-            <div class="tip-amount row__value">$4.27</div>
-          </div>
-          <div class="row">
-            <div>
-              <div>Total</div>
-              <small>/ person</small>
+            <div class="row">
+              <div>
+                <div>Total</div>
+                <small>/ person</small>
+              </div>
+              <div class="total row__value">$32.79</div>
             </div>
-            <div class="total row__value">$32.79</div>
           </div>
           <button class="btn btn--reset">Reset</button>
         </div>

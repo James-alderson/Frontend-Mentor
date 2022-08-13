@@ -1,0 +1,24 @@
+$media: (
+	"xs": 0,
+	"sm": 36rem,
+	"md": 48rem,
+	"lg": 62rem,
+	"xl": 75rem,
+	"xxl": 87.5rem,
+);
+
+@mixin respond($breakpoint) {
+	@each $breakpoints, $size in $media {
+		@if $breakpoint == $breakpoints {
+			@media screen and (min-width: $size) {
+				@content;
+			}
+		}
+	}
+}
+
+@mixin customRespond($breakpoint) {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
