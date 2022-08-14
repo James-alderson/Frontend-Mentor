@@ -76,6 +76,11 @@
 	&--error {
 		border-color: color(Error-clr);
 
+		+ #errorText {
+			opacity: 1;
+			visibility: visible;
+		}
+
 		&:focus {
 			border-color: color(Error-clr);
 		}

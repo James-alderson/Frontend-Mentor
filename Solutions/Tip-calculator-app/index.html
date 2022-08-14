@@ -18,7 +18,7 @@
     <div class="calculator">
       <img class="calculator__logo" src="assets/images/logo.svg" alt="Splitter" width="87" height="54">
       <div class="calculator__container">
-        <form class="calculator__form" action="#">
+        <form id="calculator" class="calculator__form" action="#">
           <label for="bill">Bill</label>
           <input id="bill" class="input input__form input__form--bill" type="number" name="bill" min="0"
             placeholder="0">
@@ -26,23 +26,23 @@
             <div class="label">Select Tip %</div>
             <div class="tips-group">
               <div class="tip">
-                <input id="tip_5" class="input input__radio" type="radio" name="tip">
+                <input id="tip_5" class="input input__radio" type="radio" name="tip" value="5">
                 <label for="tip_5" tabindex="0" role="button">5%</label>
               </div>
               <div class="tip">
-                <input id="tip_10" class="input input__radio" type="radio" name="tip">
+                <input id="tip_10" class="input input__radio" type="radio" name="tip" value="10">
                 <label for="tip_10" tabindex="0" role="button">10%</label>
               </div>
               <div class="tip">
-                <input id="tip_15" class="input input__radio" type="radio" name="tip">
+                <input id="tip_15" class="input input__radio" type="radio" name="tip" value="15">
                 <label for="tip_15" tabindex="0" role="button">15%</label>
               </div>
               <div class="tip">
-                <input id="tip_25" class="input input__radio" type="radio" name="tip">
+                <input id="tip_25" class="input input__radio" type="radio" name="tip" value="25">
                 <label for="tip_25" tabindex="0" role="button">25%</label>
               </div>
               <div class="tip">
-                <input id="tip_50" class="input input__radio" type="radio" name="tip">
+                <input id="tip_50" class="input input__radio" type="radio" name="tip" value="50">
                 <label for="tip_50" tabindex="0" role="button">50%</label>
               </div>
               <input id="custom" class="input input__form input__form--custom" type="number" name="custom" min="0"
@@ -51,9 +51,9 @@
           </div>
           <div class="input-container">
             <label for="people">Number of People</label>
-            <input id="people" class="input input__form input__form--people input--error" type="number" name="people"
+            <input id="people" class="input input__form input__form--people" type="number" name="people"
               min="0" placeholder="0">
-            <div class="calculator__error-message">Can't be zero</div>
+            <div id="errorText" class="calculator__error-message">Can't be zero</div>
           </div>
         </form>
         <div class="calculator__result">
@@ -63,17 +63,17 @@
                 <div>Tip Amount</div>
                 <small>/ person</small>
               </div>
-              <div class="tip-amount row__value">$4.27</div>
+              <div id="tipAmount" class="row__value" title="$0.00">$0.00</div>
             </div>
             <div class="row">
               <div>
                 <div>Total</div>
                 <small>/ person</small>
               </div>
-              <div class="total row__value">$32.79</div>
+              <div id="total" class="row__value" title="$0.00">$0.00</div>
             </div>
           </div>
-          <button class="btn btn--reset">Reset</button>
+          <button id="reset" class="btn btn--reset">Reset</button>
         </div>
       </div>
     </div>
