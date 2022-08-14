@@ -14,9 +14,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,20 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./assets/screenshots/mobile-design.png)
+![](./assets/screenshots/desktop-design.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](#)
+- Live Site URL: [Live Site](#)
 
 ## My process
 
@@ -54,59 +44,78 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Sass](https://sass-lang.com/) - CSS Preprocessor
+- [Normalize](https://necolas.github.io/normalize.css/) - CSS Reset
+- [BEM](https://en.bem.info/methodology/) - Methodology
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### HTML
 
-To see how you can add code snippets, see below:
+***tabindex***
+
+> The `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the `Tab` key, hence the name).
+
+***ARIA: button role***
+
+> The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="tip">
+  <input id="tip_5" class="input input__radio" type="radio" name="tip" value="5">
+  <label for="tip_5" tabindex="0" role="button">5%</label>
+</div>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+#### JavaScript
+
+***Conditional (ternary) operator***
+
+> The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (`?`), then an expression to execute if the condition is truthy followed by a colon (`:`), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an `if...else` statement. 
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+let tipValue = (customTipValue) ? customTipValue : Number(buttonsTip.value)
+```
+***Number.prototype.toFixed()***
+
+>  The toFixed() method formats a number using fixed-point notation. 
+
+```js
+TIP_AMOUNT.innerHTML = `$${tipAmount.toFixed(2)}`
+TOTAL.innerHTML = `$${total.toFixed(2)}`
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+***HTMLElement: input event***
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+> The `input` event fires when the `value` of an `<input>`, `<select>`, or `<textarea>` element has been changed.
+
+```js
+BILL.addEventListener("input", event => {
+  validateValue(event.target.value)
+})
+CUSTOM_TIP.addEventListener("input", event => {
+  validateValue(event.target.value)
+})
+PEOPLE.addEventListener("input", event => {
+  validateValue(event.target.value, true)
+})
+```
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Challenge design for another resolutions: (medium, large, xlarge).
+- Create sass build process.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [ARIA: button role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Number.prototype.toFixed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+- [HTMLElement: input event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+- [prefers-reduced-motion: Sometimes less movement is more](https://web.dev/prefers-reduced-motion/)
+- [Hide Arrows From Input Number](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp)
+- [NPM](https://www.youtube.com/watch?v=jHDhaSSKmB0)
+- [Creating build process](https://dev.to/heytulsiprasad/make-your-css-production-ready-by-creating-a-build-process-1do8)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@James-alderson](https://www.frontendmentor.io/profile/James-alderson)
