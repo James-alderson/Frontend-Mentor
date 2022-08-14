@@ -7,7 +7,7 @@
     "compaile:sass": "sass assets/scss/main.scss:assets/css/main.comp.css",
     "prefix:css": "postcss assets/css/main.comp.css --use autoprefixer -o assets/css/main.prefix.css",
     "compress:css": "sass assets/css/main.prefix.css:assets/css/main.css --style compressed",
-    "build": "npm-run-all compaile:sass prefix:css compress:css compress:js"
+    "build": "npm-run-all compaile:sass prefix:css compress:css"
   },
   "browserslist": "last 4 versions",
   "repository": {
