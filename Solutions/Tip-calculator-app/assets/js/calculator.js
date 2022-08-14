@@ -66,8 +66,8 @@ function switchAttribute(event) {
   let customTipValue = CUSTOM_TIP.value
   let activeTip = CALCULATOR.querySelector(".input__radio[checked]")
 
-  // key code 32 === Spacebar key in keyboard
-  if (event.keyCode === 32 || event.type === "click") {
+  // key " " === Spacebar key in keyboard
+  if (event.key === " " || event.type === "click") {
     if (activeTip) activeTip.removeAttribute("checked")
     if (customTipValue) CUSTOM_TIP.value = null
 
