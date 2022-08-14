@@ -394,7 +394,7 @@ body {
   color: hsl(183deg, 100%, 15%);
   font-size: 1.5rem;
   text-align: right;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 1rem 0.25rem 2.2rem;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: border 0.2s ease-out;
@@ -438,12 +438,13 @@ body {
   cursor: pointer;
   user-select: none;
   border-radius: 5px;
+  outline: 2px solid transparent;
+  outline-offset: 1px;
   transition: 0.2s ease-out;
   background-color: hsl(183deg, 100%, 15%);
 }
 .input__radio + label:focus {
-  color: hsl(183deg, 100%, 15%);
-  background-color: hsl(172deg, 67%, 45%);
+  outline-color: hsl(172deg, 67%, 45%);
 }
 .input--error {
   border-color: hsl(15deg, 60%, 50%);
@@ -485,7 +486,7 @@ body {
 }
 @media screen and (min-width: 87.5rem) {
   .calculator__logo {
-    margin: 0 auto 5.5rem;
+    margin: 0.25rem auto 5.4rem;
   }
 }
 .calculator__container {

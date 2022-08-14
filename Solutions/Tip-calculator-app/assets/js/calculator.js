@@ -1,6 +1,6 @@
 const CALCULATOR = document.querySelector("#calculator")
 const BILL = document.querySelector("#bill")
-const TIPS = document.querySelectorAll(".tip .input__radio")
+const LABELS = document.querySelectorAll(".input__radio + label")
 const CUSTOM_TIP = document.querySelector("#custom")
 const PEOPLE = document.querySelector("#people")
 const TIP_AMOUNT = document.querySelector("#tipAmount")
@@ -16,9 +16,10 @@ CALCULATOR.addEventListener("submit", event => {
   event.preventDefault()
 })
 
-// Get tip elements
-TIPS.forEach(tip => {
-  tip.addEventListener("click", switchAttribute)
+// Get label elements
+LABELS.forEach(label => {
+  label.addEventListener("click", switchAttribute)
+  label.addEventListener("keyup", switchAttribute)
 })
 
 // Send (BILL, CUSTOM_TIP, PEOPLE) values for validate
@@ -61,13 +62,17 @@ const showValue = () => {
 // Set and remove [checked] attribute from tip, and reset CUSTOM_TIP value
 function switchAttribute(event) {
   let targetTip = event.target
+  let targetInput = targetTip.previousElementSibling
   let customTipValue = CUSTOM_TIP.value
   let activeTip = CALCULATOR.querySelector(".input__radio[checked]")
 
-  if (activeTip) activeTip.removeAttribute("checked")
-  if (customTipValue) CUSTOM_TIP.value = null
+  // key code 32 === Spacebar key in keyboard
+  if (event.keyCode === 32 || event.type === "click") {
+    if (activeTip) activeTip.removeAttribute("checked")
+    if (customTipValue) CUSTOM_TIP.value = null
 
-  targetTip.setAttribute("checked", "true")
+    targetInput.setAttribute("checked", "true")
+  }
 
   showValue()
 }
@@ -76,10 +81,7 @@ function switchAttribute(event) {
 function resetTip() {
   let activeTip = CALCULATOR.querySelector(".input__radio[checked]")
 
-  if (activeTip) {
-    activeTip.checked = false
-    activeTip.removeAttribute("checked")
-  }
+  if (activeTip) activeTip.removeAttribute("checked")
 }
 CUSTOM_TIP.addEventListener("input", resetTip)
 

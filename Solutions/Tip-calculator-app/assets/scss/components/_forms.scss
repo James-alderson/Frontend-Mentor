@@ -8,7 +8,7 @@
 		color: color(Very-dark-cyan);
 		font-size: 1.5rem;
 		text-align: right;
-		padding: 0.25rem 1rem;
+		padding: 0.25rem 1rem 0.25rem 2.2rem;
 		border-radius: 5px;
 		border: 2px solid transparent;
 		transition: border 0.2s ease-out;
@@ -63,12 +63,13 @@
 			cursor: pointer;
 			user-select: none;
 			border-radius: 5px;
+			outline: 2px solid transparent;
+			outline-offset: 1px;
 			transition: 0.2s ease-out;
 			background-color: color(Very-dark-cyan);
 
 			&:focus {
-				color: color(Very-dark-cyan);
-				background-color: color(Strong-cyan);
+				outline-color: color(Strong-cyan);
 			}
 		}
 	}
