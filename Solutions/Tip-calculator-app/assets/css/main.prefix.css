@@ -1,0 +1,712 @@
+@font-face {
+  font-family: "SpaceMono";
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/Space_Mono/SpaceMono-Bold.ttf);
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  color: hsl(186deg, 14%, 43%);
+  place-items: center;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+img {
+  display: block;
+}
+
+small {
+  display: inline-block;
+  color: hsl(184deg, 14%, 56%);
+  margin-top: 0.4rem;
+}
+
+label,
+.label {
+  display: block;
+  cursor: default;
+  margin-bottom: 0.55rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "SpaceMono", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.btn--reset {
+  color: hsl(183deg, 100%, 15%);
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.73rem;
+  margin-top: 0.4rem;
+  -webkit-transition: background 0.25s ease-out;
+  -o-transition: background 0.25s ease-out;
+  transition: background 0.25s ease-out;
+  background-color: hsl(172deg, 67%, 45%);
+}
+.btn--reset:not(:disabled):hover, .btn--reset:not(:disabled):focus {
+  background-color: #a1e8e0;
+}
+.btn--reset:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.input__form {
+  width: 100%;
+  color: hsl(183deg, 100%, 15%);
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0.25rem 1rem 0.25rem 2.2rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  -webkit-transition: border 0.2s ease-out;
+  -o-transition: border 0.2s ease-out;
+  transition: border 0.2s ease-out;
+  background: hsl(189deg, 41%, 97%) no-repeat;
+}
+.input__form:focus {
+  border-color: hsl(172deg, 67%, 45%);
+}
+.input__form--bill {
+  background-image: url(../images/icon-dollar.svg);
+  background-position: 17px 52%;
+}
+@media screen and (min-width: 87.5rem) {
+  .input__form--custom {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+.input__form--people {
+  background-image: url(../images/icon-person.svg);
+  background-position: 15px 52%;
+}
+.input__radio {
+  display: none;
+}
+.input__radio:checked + label {
+  color: hsl(183deg, 100%, 15%);
+  background-color: hsl(172deg, 67%, 45%);
+}
+.input__radio:not(:checked):hover + label {
+  color: hsl(183deg, 100%, 15%);
+  background-color: #a1e8e0;
+}
+.input__radio + label {
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0.64rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+  outline: 2px solid transparent;
+  outline-offset: 1px;
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  background-color: hsl(183deg, 100%, 15%);
+}
+.input__radio + label:focus {
+  outline-color: hsl(172deg, 67%, 45%);
+}
+.input--error {
+  border-color: hsl(15deg, 60%, 50%);
+}
+.input--error + #errorText {
+  opacity: 1;
+  visibility: visible;
+}
+.input--error:focus {
+  border-color: hsl(15deg, 60%, 50%);
+}
+
+.calculator {
+  max-width: 375px;
+}
+@media screen and (min-width: 36rem) {
+  .calculator {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .calculator {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .calculator {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator {
+    max-width: 920px;
+    margin-top: -5rem;
+  }
+}
+.calculator__logo {
+  margin: 3.1rem auto 2.5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__logo {
+    margin: 0.25rem auto 5.4rem;
+  }
+}
+.calculator__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem 1rem;
+  padding: 2.17rem 1.5rem 1.9rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25px 25px 0 0;
+  background-color: hsl(0deg, 0%, 100%);
+  -webkit-box-shadow: 0 25px 20px 15px #b7dde1;
+          box-shadow: 0 25px 20px 15px #b7dde1;
+}
+@media screen and (min-width: 36rem) {
+  .calculator__container {
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .calculator__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .calculator__container > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 1rem);
+            flex: 0 0 calc(50% - 1rem);
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__container {
+    padding: 2rem;
+  }
+}
+.calculator__form {
+  padding: 0 0.5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__form {
+    padding: 1rem;
+  }
+}
+.calculator__tip {
+  margin: 2.18rem 0;
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__tip {
+    margin: 2.65rem 0;
+  }
+}
+.calculator__tip .tips-group {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 48rem) {
+  .calculator__tip .tips-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 62rem) {
+  .calculator__tip .tips-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__tip .tips-group {
+    -webkit-column-gap: 0.9rem;
+       -moz-column-gap: 0.9rem;
+            column-gap: 0.9rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.calculator__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: hsl(0deg, 0%, 100%);
+  padding: 2.6rem 1.35rem 1.5rem 1.5rem;
+  border-radius: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: hsl(183deg, 100%, 15%);
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator__result {
+    padding: 2.85rem 2.5rem 2.45rem;
+  }
+}
+.calculator .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.8rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator .row {
+    margin-bottom: 2.65rem;
+  }
+}
+.calculator .row__value {
+  max-width: 170px;
+  font-size: 1.95rem;
+  color: hsl(172deg, 67%, 45%);
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+@media screen and (min-width: 36rem) {
+  .calculator .row__value {
+    max-width: 290px;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .calculator .row__value {
+    max-width: 490px;
+    font-size: 2.9rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .calculator .row__value {
+    max-width: 150px;
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .calculator .row__value {
+    max-width: 200px;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .calculator .row__value {
+    max-width: 220px;
+    font-size: 2.9rem;
+    -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+.calculator .input-container {
+  position: relative;
+}
+.calculator__error-message {
+  color: hsl(15deg, 60%, 50%);
+  position: absolute;
+  bottom: -21px;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+@media screen and (min-width: 360px) {
+  .calculator__error-message {
+    top: 0;
+    bottom: initial;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-duration: 0s !important;
+         -o-transition-duration: 0s !important;
+            transition-duration: 0s !important;
+    -webkit-transition-delay: 0s !important;
+         -o-transition-delay: 0s !important;
+            transition-delay: 0s !important;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvYWJzdHJhY3RzL19mb250cy5zY3NzIiwibWFpbi5jb21wLmNzcyIsIi4uL3Njc3MvYmFzZS9fbm9ybWFsaXplLnNjc3MiLCIuLi9zY3NzL2Jhc2UvX2Jhc2Uuc2NzcyIsIi4uL3Njc3MvYmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Nzcy9jb21wb25lbnRzL19idXR0b25zLnNjc3MiLCIuLi9zY3NzL2NvbXBvbmVudHMvX2Zvcm1zLnNjc3MiLCIuLi9zY3NzL2Fic3RyYWN0cy9fYnJlYWtwb2ludHMuc2NzcyIsIi4uL3Njc3MvbGF5b3V0L19jYWxjdWxhdG9yLnNjc3MiLCIuLi9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLHdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGdEQUFBO0FDQ0Q7QUNMQSwyRUFBQTtBQUVBOytFQUFBO0FBR0E7OztFQUFBO0FBS0M7RUFDQyxpQkFBQSxFQUFBLE1BQUE7RUFDQSw4QkFBQSxFQUFBLE1BQUE7QURJRjs7QUNEQTsrRUFBQTtBQUdBOztFQUFBO0FBSUE7RUFDRSxTQUFBO0FERUY7O0FDQ0E7O0VBQUE7QUFJQTtFQUNFLGNBQUE7QURDRjs7QUNFQTs7O0VBQUE7QUFLQTtFQUNFLGNBQUE7RUFDQSxnQkFBQTtBREFGOztBQ0dBOytFQUFBO0FBR0E7OztFQUFBO0FBS0E7RUFDRSwrQkFBQTtVQUFBLHVCQUFBLEVBQUEsTUFBQTtFQUNBLFNBQUEsRUFBQSxNQUFBO0VBQ0EsaUJBQUEsRUFBQSxNQUFBO0FERkY7O0FDS0E7OztFQUFBO0FBS0E7RUFDRSxpQ0FBQSxFQUFBLE1BQUE7RUFDQSxjQUFBLEVBQUEsTUFBQTtBREhGOztBQ01BOytFQUFBO0FBR0E7O0VBQUE7QUFJQTtFQUNFLDZCQUFBO0FETEY7O0FDUUE7OztFQUFBO0FBS0E7RUFDRSxtQkFBQSxFQUFBLE1BQUE7RUFDQSwwQkFBQSxFQUFBLE1BQUE7RUFDQSx5Q0FBQTtVQUFBLGlDQUFBLEVBQUEsTUFBQTtBRE5GOztBQ1NBOztFQUFBO0FBSUE7O0VBRUUsbUJBQUE7QURQRjs7QUNVQTs7O0VBQUE7QUFLQTs7O0VBR0UsaUNBQUEsRUFBQSxNQUFBO0VBQ0EsY0FBQSxFQUFBLE1BQUE7QURSRjs7QUNXQTs7RUFBQTtBQUlBO0VBQ0UsY0FBQTtBRFRGOztBQ1lBOzs7RUFBQTtBQUtBOztFQUVFLGNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSx3QkFBQTtBRFZGOztBQ2FBO0VBQ0UsZUFBQTtBRFZGOztBQ2FBO0VBQ0UsV0FBQTtBRFZGOztBQ2FBOytFQUFBO0FBR0E7O0VBQUE7QUFJQTtFQUNFLGtCQUFBO0FEWkY7O0FDZUE7K0VBQUE7QUFHQTs7O0VBQUE7QUFLQTs7Ozs7RUFLRSxvQkFBQSxFQUFBLE1BQUE7RUFDQSxlQUFBLEVBQUEsTUFBQTtFQUNBLGlCQUFBLEVBQUEsTUFBQTtFQUNBLFNBQUEsRUFBQSxNQUFBO0FEZEY7O0FDaUJBOzs7RUFBQTtBQUtBO1FBQ1EsTUFBQTtFQUNOLGlCQUFBO0FEZkY7O0FDa0JBOzs7RUFBQTtBQUtBO1NBQ1MsTUFBQTtFQUNQLG9CQUFBO0FEaEJGOztBQ21CQTs7RUFBQTtBQUlBOzs7O0VBSUUsMEJBQUE7QURqQkY7O0FDb0JBOztFQUFBO0FBSUE7Ozs7RUFJRSxrQkFBQTtFQUNBLFVBQUE7QURsQkY7O0FDcUJBOztFQUFBO0FBSUE7Ozs7RUFJRSw4QkFBQTtBRG5CRjs7QUNzQkE7O0VBQUE7QUFJQTtFQUNFLDhCQUFBO0FEcEJGOztBQ3VCQTs7Ozs7RUFBQTtBQU9BO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQSxFQUFBLE1BQUE7RUFDQSxjQUFBLEVBQUEsTUFBQTtFQUNBLGNBQUEsRUFBQSxNQUFBO0VBQ0EsZUFBQSxFQUFBLE1BQUE7RUFDQSxVQUFBLEVBQUEsTUFBQTtFQUNBLG1CQUFBLEVBQUEsTUFBQTtBRHJCRjs7QUN3QkE7O0VBQUE7QUFJQTtFQUNFLHdCQUFBO0FEdEJGOztBQ3lCQTs7RUFBQTtBQUlBO0VBQ0UsY0FBQTtBRHZCRjs7QUMwQkE7OztFQUFBO0FBS0E7O0VBRUUsOEJBQUE7VUFBQSxzQkFBQSxFQUFBLE1BQUE7RUFDQSxVQUFBLEVBQUEsTUFBQTtBRHhCRjs7QUMyQkE7O0VBQUE7QUFJQTs7RUFFRSxZQUFBO0FEekJGOztBQzRCQTs7O0VBQUE7QUFLQTtFQUNFLDZCQUFBLEVBQUEsTUFBQTtFQUNBLG9CQUFBLEVBQUEsTUFBQTtBRDFCRjs7QUM2QkE7O0VBQUE7QUFJQTtFQUNFLHdCQUFBO0FEM0JGOztBQzhCQTs7O0VBQUE7QUFLQTtFQUNFLDBCQUFBLEVBQUEsTUFBQTtFQUNBLGFBQUEsRUFBQSxNQUFBO0FENUJGOztBQytCQTsrRUFBQTtBQUdBOztFQUFBO0FBSUE7RUFDRSxjQUFBO0FEOUJGOztBQ2lDQTs7RUFBQTtBQUlBO0VBQ0Usa0JBQUE7QUQvQkY7O0FDa0NBOytFQUFBO0FBR0E7O0VBQUE7QUFJQTtFQUNFLGFBQUE7QURqQ0Y7O0FDb0NBOztFQUFBO0FBSUE7RUFDRSxhQUFBO0FEbENGOztBRXZUQTs7O0VBR0MsOEJBQUE7VUFBQSxzQkFBQTtBRjBURDs7QUV2VEE7RUFDQyxhQUFBO0FGMFREOztBRXZUQTtFQUNDLGFBQUE7RUFDQSxhQUFBO0VBQ0EsNEJBQUE7RUFDQSxtQkFBQTtFQUNBLHVDQUFBO0FGMFREOztBRXZUQTtFQUNDLGNBQUE7QUYwVEQ7O0FFdlRBO0VBQ0MscUJBQUE7RUFDQSw0QkFBQTtFQUNBLGtCQUFBO0FGMFREOztBRXZUQTs7RUFFQyxjQUFBO0VBQ0EsZUFBQTtFQUNBLHNCQUFBO0FGMFREOztBRXRUQSxnQ0FBQTtBQUNBOztFQUVDLHdCQUFBO0VBQ0EsU0FBQTtBRnlURDs7QUV0VEEsWUFBQTtBQUNBO0VBQ0MsMEJBQUE7QUZ5VEQ7O0FHdFdBO0VBQ0Msb0NBQUE7QUh5V0Q7O0FJeFdBO0VBQ0MscUJBQUE7RUFDQSx5QkFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLGtCQUFBO0VBQ0EsNkJBQUE7QUoyV0Q7QUkxV0M7RUFDQyw2QkFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSw2Q0FBQTtFQUFBLHdDQUFBO0VBQUEscUNBQUE7RUFDQSx1Q0FBQTtBSjRXRjtBSTFXRTtFQUVDLHlCQUFBO0FKMldIO0FJcFdFO0VBQ0MsWUFBQTtFQUNBLFlBQUE7QUpzV0g7O0FLaFlDO0VBQ0MsV0FBQTtFQUNBLDZCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLG9DQUFBO0VBQ0Esa0JBQUE7RUFDQSw2QkFBQTtFQUNBLHdDQUFBO0VBQUEsbUNBQUE7RUFBQSxnQ0FBQTtFQUNBLDJDQUFBO0FMbVlGO0FLallFO0VBQ0MsbUNBQUE7QUxtWUg7QUsvWEM7RUFDQyxnREFBQTtFQUNBLDZCQUFBO0FMaVlGO0FNNVlHO0VEY0Y7SUFFRSxvQkFBQTtJQUNBLHFCQUFBO0VMZ1lEO0FBQ0Y7QUs3WEM7RUFDQyxnREFBQTtFQUNBLDZCQUFBO0FMK1hGO0FLNVhDO0VBQ0MsYUFBQTtBTDhYRjtBSzVYRTtFQUNDLDZCQUFBO0VBQ0EsdUNBQUE7QUw4WEg7QUs1WEU7RUFDQyw2QkFBQTtFQUNBLHlCQUFBO0FMOFhIO0FLdFhFO0VBQ0MsV0FBQTtFQUNBLDBCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO01BQUEscUJBQUE7VUFBQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtFQUNBLGlDQUFBO0VBQUEsNEJBQUE7RUFBQSx5QkFBQTtFQUNBLHdDQUFBO0FMd1hIO0FLdFhHO0VBQ0Msb0NBQUE7QUx3WEo7QUtuWEM7RUFDQyxrQ0FBQTtBTHFYRjtBS25YRTtFQUNDLFVBQUE7RUFDQSxtQkFBQTtBTHFYSDtBS2xYRTtFQUNDLGtDQUFBO0FMb1hIOztBT3JjQTtFQUNDLGdCQUFBO0FQd2NEO0FNamNHO0VDUkg7SUFJRSxnQkFBQTtFUHljQTtBQUNGO0FNdGNHO0VDUkg7SUFPRSxnQkFBQTtFUDJjQTtBQUNGO0FNM2NHO0VDUkg7SUFVRSxnQkFBQTtFUDZjQTtBQUNGO0FNaGRHO0VDUkg7SUFhRSxnQkFBQTtJQUNBLGlCQUFBO0VQK2NBO0FBQ0Y7QU83Y0M7RUFDQywwQkFBQTtBUCtjRjtBTXpkRztFQ1NGO0lBSUUsMkJBQUE7RVBnZEQ7QUFDRjtBTzdjQztFQUNDLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsY0FBQTtFQUNBLDhCQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7RUFDQSw0QkFBQTtFQUNBLHFDQUFBO0VBQ0EsNENBQUE7VUFBQSxvQ0FBQTtBUCtjRjtBTXZlRztFQ2lCRjtJQVVFLG1CQUFBO0VQZ2REO0FBQ0Y7QU01ZUc7RUNpQkY7SUFhRSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtJQUNBLHlCQUFBO1FBQUEsc0JBQUE7WUFBQSw4QkFBQTtFUGtkRDtFT2pkQztJQUNDLG1CQUFBO1FBQUEsOEJBQUE7WUFBQSwwQkFBQTtFUG1kRjtBQUNGO0FNcmZHO0VDaUJGO0lBb0JFLGFBQUE7RVBvZEQ7QUFDRjtBT2pkQztFQUNDLGlCQUFBO0FQbWRGO0FNN2ZHO0VDeUNGO0lBSUUsYUFBQTtFUG9kRDtBQUNGO0FPamRDO0VBQ0MsaUJBQUE7QVBtZEY7QU1yZ0JHO0VDaURGO0lBSUUsaUJBQUE7RVBvZEQ7QUFDRjtBT2xkRTtFQUNDLGFBQUE7RUFDQSxTQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQ0FBQTtBUG9kSDtBTWhoQkc7RUN3REQ7SUFPRSxxQ0FBQTtFUHFkRjtBQUNGO0FNcmhCRztFQ3dERDtJQVVFLHFDQUFBO0VQdWRGO0FBQ0Y7QU0xaEJHO0VDd0REO0lBYUUsMEJBQUE7T0FBQSx1QkFBQTtZQUFBLGtCQUFBO0lBQ0EscUNBQUE7RVB5ZEY7QUFDRjtBT3JkQztFQUNDLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsMEJBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsOEJBQUE7RUFDQSx3Q0FBQTtBUHVkRjtBTXppQkc7RUMyRUY7SUFVRSwrQkFBQTtFUHdkRDtBQUNGO0FPcmRDO0VBQ0Msb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSxxQkFBQTtFQUNBLHNCQUFBO01BQUEsbUJBQUE7VUFBQSxxQkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSw4QkFBQTtBUHVkRjtBTXBqQkc7RUN5RkY7SUFPRSxzQkFBQTtFUHdkRDtBQUNGO0FPdGRFO0VBQ0MsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLDRCQUFBO0VBQ0EsMEJBQUE7S0FBQSx1QkFBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7RUFDQSxtQ0FBQTtNQUFBLCtCQUFBO1VBQUEsMkJBQUE7QVB3ZEg7QU1sa0JHO0VDbUdEO0lBVUUsZ0JBQUE7SUFDQSxpQkFBQTtFUHlkRjtBQUNGO0FNeGtCRztFQ21HRDtJQWNFLGdCQUFBO0lBQ0EsaUJBQUE7RVAyZEY7QUFDRjtBTTlrQkc7RUNtR0Q7SUFrQkUsZ0JBQUE7SUFDQSxpQkFBQTtFUDZkRjtBQUNGO0FNcGxCRztFQ21HRDtJQXNCRSxnQkFBQTtJQUNBLGlCQUFBO0VQK2RGO0FBQ0Y7QU0xbEJHO0VDbUdEO0lBMEJFLGdCQUFBO0lBQ0EsaUJBQUE7SUFDQSxrQ0FBQTtRQUFBLDhCQUFBO1lBQUEsMEJBQUE7RVBpZUY7QUFDRjtBTzdkQztFQUNDLGtCQUFBO0FQK2RGO0FPNWRDO0VBQ0MsMkJBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxRQUFBO0VBQ0EsVUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUNBQUE7RUFBQSw0QkFBQTtFQUFBLHlCQUFBO0FQOGRGO0FNcm1CQztFQ2dJQTtJQVVFLE1BQUE7SUFDQSxlQUFBO0VQK2REO0FBQ0Y7O0FRMW5CQTtFQUNDOzs7SUFHQyx3Q0FBQTtZQUFBLGdDQUFBO0lBQ0EsMENBQUE7WUFBQSxrQ0FBQTtJQUNBLCtDQUFBO1lBQUEsdUNBQUE7SUFDQSx5Q0FBQTtJQUNBLGdDQUFBO0lBQ0EsMENBQUE7U0FBQSxxQ0FBQTtZQUFBLGtDQUFBO0lBQ0EsdUNBQUE7U0FBQSxrQ0FBQTtZQUFBLCtCQUFBO0VSNm5CQTtBQUNGIiwiZmlsZSI6Im1haW4ucHJlZml4LmNzcyJ9 */
