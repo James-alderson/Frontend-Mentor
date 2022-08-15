@@ -482,7 +482,14 @@ body {
   }
 }
 .calculator .splitter {
-  display: none;
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  text-indent: -5000px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .calculator__logo {
   margin: 3.1rem auto 2.5rem;
