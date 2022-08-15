@@ -71,7 +71,7 @@ function switchAttribute(event) {
     if (activeTip) activeTip.removeAttribute("checked")
     if (customTipValue) CUSTOM_TIP.value = null
 
-    targetInput.setAttribute("checked", "true")
+    targetInput.setAttribute("checked", "")
   }
 
   showValue()
@@ -99,7 +99,7 @@ function resetCalculator() {
 
   if (activeTip) activeTip.removeAttribute("checked")
   CALCULATOR.reset()
-  RESET.setAttribute("disabled", "true")
+  RESET.setAttribute("disabled", "")
   PEOPLE.classList.remove("input--error")
   resetOutput()
 }

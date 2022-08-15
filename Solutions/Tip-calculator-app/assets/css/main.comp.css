@@ -481,6 +481,9 @@ body {
     margin-top: -5rem;
   }
 }
+.calculator .splitter {
+  display: none;
+}
 .calculator__logo {
   margin: 3.1rem auto 2.5rem;
 }
