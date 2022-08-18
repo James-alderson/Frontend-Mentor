@@ -1,0 +1,27 @@
+{
+  "name": "interactive-pricing-component",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Interactive pricing component challenge]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/Frontend-Mentor.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "sass",
+    "node",
+    "npm"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/Frontend-Mentor/issues"
+  },
+  "homepage": "https://github.com/James-alderson/Frontend-Mentor#readme"
+}
