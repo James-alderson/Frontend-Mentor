@@ -1,0 +1,16 @@
+@font-face {
+	font-family: "Manrope";
+	font-weight: 800;
+	font-display: swap;
+	src: url(../fonts/Manrope/Manrope-ExtraBold.ttf);
+}
+@font-face {
+	font-family: "Manrope";
+	font-weight: 600;
+	font-display: swap;
+	src: url(../fonts/Manrope/Manrope-SemiBold.ttf);
+}
+
+$fonts: (
+  "Manrope": ("Manrope", sans-serif),
+);
