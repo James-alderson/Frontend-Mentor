@@ -5,6 +5,7 @@ const BILLING = document.querySelector("#billing")
 const CHECKBOX = document.querySelector("#billing + label")
 const BUTTON = document.querySelector("#submit")
 const DISCOUNT = document.querySelector("#discount")
+const LOADER = document.querySelector(".loader")
 
 window.addEventListener("load", loadFunc)
 window.addEventListener("resize", discountText)
@@ -13,6 +14,7 @@ BILLING.addEventListener("change", billFunc)
 CHECKBOX.addEventListener("keyup", checkFunc)
 
 function loadFunc() {
+  loaderFunc()
   rangeFunc()
   discountText()
 }
@@ -54,4 +56,13 @@ function discountText() {
   } else {
     DISCOUNT.innerHTML = "-25%"
   }
+}
+
+function loaderFunc() {
+  LOADER.classList.add("hidden")
+  document.body.style.overflow = "visible"
+
+  setTimeout(() => {
+    LOADER.style.display = "none"
+  }, 500)
 }

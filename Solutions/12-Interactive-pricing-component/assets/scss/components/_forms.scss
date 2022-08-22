@@ -41,6 +41,7 @@
 			}
 			&:active {
 				cursor: grabbing;
+				background-color: darken(color(Strong_Cyan), 5%);
 			}
 
 			@include respond(sm) {
@@ -72,6 +73,7 @@
 			}
 			&:active {
 				cursor: grabbing;
+				background-color: darken(color(Strong_Cyan), 5%);
 			}
 
 			@include respond(sm) {
@@ -86,11 +88,11 @@
 			}
 		}
 
-		&:focus::-webkit-slider-thumb {
+		&:focus-visible::-webkit-slider-thumb {
 			outline-color: color(Light_Red);
 			background-color: darken(color(Strong_Cyan), 5%);
 		}
-		&:focus::-moz-range-thumb {
+		&:focus-visible::-moz-range-thumb {
 			outline-color: color(Light_Red);
 			background-color: darken(color(Strong_Cyan), 5%);
 		}
@@ -122,7 +124,7 @@
 			transition: 0.2s ease-out;
 			background-color: color(Light_Grayish_Blue-T);
 
-			&:focus {
+			&:focus-visible {
 				outline-color: color(Light_Red);
 			}
 

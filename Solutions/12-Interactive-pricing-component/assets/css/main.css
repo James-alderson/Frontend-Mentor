@@ -311,13 +311,13 @@ template {
   font-family: "Manrope";
   font-weight: 800;
   font-display: swap;
-  src: url(../fonts/Manrope/Manrope-ExtraBold.ttf);
+  src: url(../fonts/Manrope/Manrope-ExtraBold.woff);
 }
 @font-face {
   font-family: "Manrope";
   font-weight: 600;
   font-display: swap;
-  src: url(../fonts/Manrope/Manrope-SemiBold.ttf);
+  src: url(../fonts/Manrope/Manrope-SemiBold.woff);
 }
 *,
 *::before,
@@ -339,6 +339,7 @@ body {
   color: hsl(225deg, 20%, 60%);
   font-family: "Manrope", sans-serif;
   place-items: center;
+  overflow: hidden;
   background: hsl(230deg, 100%, 99%) url(../images/bg-pattern.svg) no-repeat left top/100% 65%;
 }
 @media screen and (min-width: 36rem) {
@@ -395,6 +396,7 @@ img {
 }
 .form__range::-webkit-slider-thumb:active {
   cursor: grabbing;
+  background-color: #0ebeac;
 }
 @media screen and (min-width: 36rem) {
   .form__range::-webkit-slider-thumb {
@@ -426,6 +428,7 @@ img {
 }
 .form__range::-moz-range-thumb:active {
   cursor: grabbing;
+  background-color: #0ebeac;
 }
 @media screen and (min-width: 36rem) {
   .form__range::-moz-range-thumb {
@@ -441,11 +444,11 @@ img {
     box-shadow: 0 15px 20px 5px #a0f8ef;
   }
 }
-.form__range:focus::-webkit-slider-thumb {
+.form__range:focus-visible::-webkit-slider-thumb {
   outline-color: hsl(15deg, 100%, 70%);
   background-color: #0ebeac;
 }
-.form__range:focus::-moz-range-thumb {
+.form__range:focus-visible::-moz-range-thumb {
   outline-color: hsl(15deg, 100%, 70%);
   background-color: #0ebeac;
 }
@@ -474,7 +477,7 @@ img {
   transition: 0.2s ease-out;
   background-color: hsl(223deg, 50%, 87%);
 }
-.form__billing + label:focus {
+.form__billing + label:focus-visible {
   outline-color: hsl(15deg, 100%, 70%);
 }
 @media screen and (min-width: 36rem) {
@@ -589,6 +592,21 @@ img {
 .badge--danger {
   color: hsl(15deg, 100%, 70%);
   background-color: hsl(14deg, 92%, 95%);
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff url(../images/loader.gif) no-repeat center;
+}
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
 }
 
 .calculator {
@@ -908,6 +926,9 @@ img {
   }
   ::-moz-range-thumb {
     transition-duration: 0s !important;
+  }
+  .loader {
+    display: none;
   }
 }
 
