@@ -395,7 +395,6 @@ img {
 }
 .form__range::-webkit-slider-thumb:active {
   cursor: grabbing;
-  background-color: #0ebeac;
 }
 @media screen and (min-width: 36rem) {
   .form__range::-webkit-slider-thumb {
@@ -427,7 +426,6 @@ img {
 }
 .form__range::-moz-range-thumb:active {
   cursor: grabbing;
-  background-color: #0ebeac;
 }
 @media screen and (min-width: 36rem) {
   .form__range::-moz-range-thumb {
@@ -890,6 +888,26 @@ img {
 @media screen and (min-width: 48rem) {
   .calculator .btn {
     margin-top: -6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+  ::-webkit-slider-thumb {
+    transition-duration: 0s !important;
+  }
+  ::-moz-range-thumb {
+    transition-duration: 0s !important;
   }
 }
 

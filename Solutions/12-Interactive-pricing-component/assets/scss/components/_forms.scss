@@ -41,7 +41,6 @@
 			}
 			&:active {
 				cursor: grabbing;
-				background-color: darken(color(Strong_Cyan), 5%);
 			}
 
 			@include respond(sm) {
@@ -73,7 +72,6 @@
 			}
 			&:active {
 				cursor: grabbing;
-				background-color: darken(color(Strong_Cyan), 5%);
 			}
 
 			@include respond(sm) {
