@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](#)
-- Live Site URL: [live Site](#)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-pricing-component-XYSAR1FpH1)
+- Live Site URL: [live Site](https://james-alderson.github.io/Frontend-Mentor/Solutions/12-Interactive-pricing-component/index.html)
 
 ## My process
 
