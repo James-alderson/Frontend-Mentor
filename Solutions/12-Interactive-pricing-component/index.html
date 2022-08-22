@@ -12,6 +12,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 </head>
 <body>
-  
+
+  <main>
+    <div class="calculator">
+      <div class="calculator__header">
+        <img class="calculator__img" src="assets/images/pattern-circles.svg" alt="" aria-hidden="true">
+        <h1 class="calculator__title">Simple, traffic-based pricing</h1>
+        <p class="calculator__description">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+      <div class="calculator__main">
+        <form action="#">
+          <div class="calculator__content">
+            <div class="grid">
+              <div id="pageViews" class="calculator__pageviews">100K Pageviews</div>
+              <div class="calculator__slide">
+                <input id="range" class="form__range" type="range" name="pageviews" min="0" max="100" value="50">
+                <label for="range">range</label>
+              </div>
+              <div class="price-container">
+                <span id="price" class="price">$16.00</span>
+                <span class="per-month">/ month</span>
+              </div>
+            </div>
+            <div class="calculator__billing">
+              <span>Monthly Billing</span>
+              <div>
+                <input id="billing" class="form__billing" type="checkbox" name="yearly">
+                <label for="billing" tabindex="0"></label>
+              </div>
+              <span>Yearly Billing</span>
+              <div id="discount" class="badge badge--danger">25% discount</div>
+            </div>
+          </div>
+          <div class="h-line"></div>
+          <div class="calculator__content">
+            <div class="row">
+              <ul class="calculator__features">
+                <li>Unlimited websites</li>
+                <li>100% data ownership</li>
+                <li>Email reports</li>
+              </ul>
+              <button id="submit" class="btn btn--submit" type="button">Start my trial</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>

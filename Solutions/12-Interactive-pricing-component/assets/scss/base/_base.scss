@@ -1,4 +1,5 @@
 @use "../abstracts/functions" as *;
+@use "../abstracts/breakpoints" as *;
 
 *,
 *::before,
@@ -6,10 +7,33 @@
 	box-sizing: border-box;
 }
 
+:focus {
+	outline: none;
+}
+
+::selection {
+	background-color: rgba(color(Light_Grayish_Blue-T), 0.5);
+}
+
 body {
 	display: grid;
 	height: 100vh;
 	color: color(Grayish_Blue);
+	font-family: font(Manrope);
 	place-items: center;
-	background: color(Very_Pale_Blue);
+	background: color(Very_Pale_Blue) url(../images/bg-pattern.svg) no-repeat
+		left top / 100% 65%;
+
+	@include respond(sm) {
+		background-size: 100% 40%;
+	}
+	@include respond(md) {
+		background-size: 100% 56%;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }

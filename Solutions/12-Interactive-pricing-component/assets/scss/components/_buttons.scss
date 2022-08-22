@@ -1,0 +1,37 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/breakpoints" as *;
+
+.btn {
+	font-weight: 800;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border-radius: 100vmax;
+	border: 1px solid transparent;
+	transition: color 0.25s ease-out, opacity 0.2s ease-out;
+
+	&:focus-visible {
+		outline: none;
+	}
+	&:disabled {
+		cursor: auto;
+		opacity: 0.7;
+	}
+
+	&--submit {
+		color: color(Pale_Blue);
+		padding: 0.8rem 2.8rem;
+		background-color: color(Dark_Desaturated_Blue);
+
+		&:not(:disabled):hover,
+		&:not(:disabled):focus {
+			color: color(White_clr);
+		}
+
+		@include respond(sm) {
+			padding: 1.65rem 5.7rem;
+		}
+		@include respond(md) {
+			padding: 0.8rem 2.8rem;
+		}
+	}
+}
