@@ -618,7 +618,7 @@ img {
   .calculator {
     width: clamp(575px, 100vw, 652px);
     font-size: 1.5rem;
-    margin-top: 7.1rem;
+    margin-top: -1.2rem;
   }
 }
 @media screen and (min-width: 48rem) {

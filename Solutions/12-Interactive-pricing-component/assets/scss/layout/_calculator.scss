@@ -9,7 +9,7 @@
 	@include respond(sm) {
 		width: clamp(575px, 100vw, 652px);
 		font-size: 1.5rem;
-		margin-top: 7.1rem;
+		margin-top: -1.2rem;
 	}
 	@include respond(md) {
 		width: min(100vw, 540px);
