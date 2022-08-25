@@ -1,0 +1,257 @@
+/*  ------ Table of content ------
+
+1. webfonts
+   1.1 Red Hat Display
+2. custom property
+3. global styles
+4. components
+   5.1 card
+   5.2 btn
+5. breakpoints
+
+------------------------------- */
+
+/* ===============
+   webfonts
+   =============== */
+/* ---- Red Hat Display ---- */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* ===============
+   custom property
+   =============== */
+:root {
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(228, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+	/* ---- Custom ---- */
+	--bg-card: hsl(0, 0%, 100%);
+	--bg-card--shadow: hsl(223, 47%, 84%);
+	--bg-btn-payment--shadow: hsl(245, 75%, 90%);
+	--bg-btn-payment--hover: hsl(245, 75%, 68%);
+	--color-light: hsl(0, 0%, 100%);
+	--color-link--hover: hsl(245, 75%, 68%);
+}
+
+/* ===============
+   global styles
+   =============== */
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+body {
+	display: -ms-grid;
+	display: grid;
+	height: 100vh;
+	color: var(--Dark-blue);
+	font-family: "Red Hat Display", sans-serif;
+	font-weight: 500;
+	line-height: 1.3;
+	margin: 0;
+	place-items: center;
+	background: var(--Pale-blue) url(../images/pattern-background-mobile.svg)
+		repeat-x top center;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* ===============
+   components
+   =============== */
+/* ---- card ----*/
+.card {
+	width: min(327px, 100vw);
+	border-radius: 21px;
+	-webkit-box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
+					box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
+	background-color: var(--bg-card);
+}
+
+.card-img {
+	-o-object-fit: cover;
+		 object-fit: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+	text-align: center;
+	padding: 1rem 1.5rem 1.8rem 1.5rem;
+	border-radius: 0 0 20px 20px;
+}
+
+.card-title {
+	font-size: 1.38rem;
+	font-weight: 900;
+	margin: 1rem 0;
+}
+
+.card-description {
+	max-width: 250px;
+	color: var(--Desaturated-blue);
+	font-size: 0.95rem;
+	line-height: 1.65;
+	margin: 0 auto;
+}
+
+.card-price {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 1rem;
+	-webkit-box-align: center;
+		 -ms-flex-align: center;
+				align-items: center;
+	-webkit-box-pack: justify;
+		 -ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 1.5rem 0 1.3rem 0;
+	border-radius: 12px;
+	background-color: var(--Very-pale-blue);
+}
+
+.card-price-container {
+	-webkit-box-flex: 1;
+					-ms-flex: 1;
+							flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-column-gap: 1.2rem;
+		 -moz-column-gap: 1.2rem;
+					column-gap: 1.2rem;
+	-webkit-box-align: center;
+		 -ms-flex-align: center;
+				align-items: center;
+}
+
+.card-price-container img {
+	width: 48px;
+	height: 48px;
+}
+
+.plan {
+	text-align: left;
+}
+
+.plan-title {
+	font-size: 0.88rem;
+	font-weight: 900;
+	margin-bottom: 2px;
+}
+
+.plan-price {
+	color: var(--Desaturated-blue);
+	font-size: 0.9rem;
+}
+
+/* ---- btn ---- */
+.btn {
+	display: inline-block;
+	font-weight: 900;
+	font-family: inherit;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: 0.25s ease-out;
+			 -o-transition: 0.25s ease-out;
+					transition: 0.25s ease-out;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.btn-change {
+	color: var(--Bright-blue);
+	font-size: 0.8rem;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.btn-payment {
+	width: 100%;
+	color: var(--color-light);
+	font-size: 0.95rem;
+	padding: 0.85rem;
+	margin: 0.25rem 0 1.4rem;
+	border-radius: 12px;
+	-webkit-box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
+					box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
+	background-color: var(--Bright-blue);
+}
+.btn-payment:hover,
+.btn-payment:focus {
+	color: var(--color-light);
+	background-color: var(--bg-btn-payment--hover);
+}
+
+.btn-cancel {
+	color: var(--Desaturated-blue);
+	font-size: 0.95rem;
+}
+.btn-cancel:hover,
+.btn-cancel:focus {
+	color: var(--Dark-blue);
+}
+
+/* ===============
+	 breakpoints
+	 =============== */
+/* ---- When screen resolution bigger than 500 pixel ---- */
+@media (min-width: 500px) {
+	body {
+		background-image: url(../images/pattern-background-desktop.svg);
+	}
+
+	.card {
+		width: initial;
+		max-width: 450px;
+	}
+
+	.card-content {
+		padding: 1.8rem 3rem 2.8rem;
+	}
+
+	.card-title {
+		font-size: 1.75rem;
+	}
+
+	.card-description {
+		max-width: 350px;
+		font-size: 1rem;
+	}
+
+	.card-price {
+		padding: 1.6rem 1.3rem 1.6rem 1.5rem;
+		margin: 1.2rem 0;
+	}
+
+	.plan-title {
+		font-size: 1rem;
+		margin-bottom: 0.3rem;
+	}
+	
+	.plan-price {
+		font-size: 1.03rem;
+	}
+
+	.btn-change {
+		font-size: 0.85rem;
+	}
+
+	.btn-payment {
+		padding: 0.9rem;
+		margin: 0.8rem 0 1.8rem;
+	}
+}
