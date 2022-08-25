@@ -1,0 +1,50 @@
+/* ---- Desktop resolution ---- */
+@media (min-width: 600px) {
+	.card {
+		width: 485px;
+		width: clamp(300px, 485px, calc(100% - 1.8rem));
+		border-radius: 19px;
+	}
+	.card span {
+		font-size: 0.9rem;
+	}
+
+	.card-header {
+		padding: 1.15rem 1.9rem 1.4rem 1.6rem;
+		margin-bottom: 1.2rem;
+		border-radius: 18px;
+	}
+	.card-header h4 {
+		font-size: 1.58rem;
+		margin: 0.45rem 0 0.15rem 0;
+	}
+	.card-header img {
+		max-width: 65px;
+		margin-top: 0.3rem;
+	}
+
+	.card-main {
+		padding: 1.85rem 2rem 2.3rem 2rem;
+		border-radius: 18px;
+	}
+	.card-main h3 {
+		font-size: 1.6rem;
+	}
+
+	.card-chart {
+		max-height: 185px;
+		margin: 2.4rem 0 1.25rem 0;
+	}
+
+	.card-main-content h2 {
+		font-size: 2.4rem;
+		margin: 0.25rem 0 0 0;
+	}
+	.card-status h6 {
+		line-height: 0.9;
+	}
+
+	.h-line {
+		margin-bottom: 1.4rem;
+	}
+}

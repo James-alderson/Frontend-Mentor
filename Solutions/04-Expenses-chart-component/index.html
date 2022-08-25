@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Alderson">
+
+  <title>Expenses chart component</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media_queries.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <!-- Chart.js 3.8.0 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section class="card">
+    <div class="card-header">
+      <div>
+        <span>My balance</span>
+        <h4>$921.48</h4>
+      </div>
+      <img src="assets/images/logo.svg" alt="logo">
+    </div>
+    <div class="card-main">
+      <h3>Spending - Last 7 days</h3>
+      <canvas class="card-chart"></canvas>
+      <div class="h-line"></div>
+      <div class="card-main-content">
+        <div>
+          <span>Total this month</span>
+          <h2>$478.33</h2>
+        </div>
+        <div class="card-status">
+          <h6>+2.4%</h6>
+          <span>from last month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/chart.js"></script>
+</body>
+</html>

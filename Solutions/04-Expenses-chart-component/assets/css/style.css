@@ -1,0 +1,158 @@
+/* ------ Table of content ------
+
+1. Webfonts
+   1.1 DM Sans
+2. Custom property
+2. Global styles
+3. Typography
+4. Components
+   4.1 card
+   4.2 h-line
+
+------------------------------ */
+
+/* ===============
+   Webfonts
+   =============== */
+/* ---- DM Sans ---- */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+/* ===============
+   Custom property
+   =============== */
+:root {
+	--Soft-red: hsl(10, 79%, 65%);
+	--Cyan: hsl(186, 34%, 60%);
+	--Dark-brown: hsl(25, 47%, 15%);
+	--Medium-brown: hsl(28, 10%, 53%);
+	--Cream: hsl(27, 66%, 92%);
+	--Very-pale-orange: hsl(30, 100%, 98%);
+}
+
+/* ===============
+   Global styles
+   =============== */
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	display: grid;
+	height: 100vh;
+	place-items: center;
+	color: var(--Dark-brown);
+	font-family: "DM Sans", sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	background-color: var(--Cream);
+}
+
+/* ===============
+   Typography
+   =============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1;
+	margin: 1rem 0;
+}
+
+/* ===============
+   Components
+   =============== */
+/* ---- card ---- */
+.card {
+	width: 340px;
+	width: clamp(300px, 340px, calc(100% - 1.8rem));
+	margin: 2rem 0.9rem;
+	border-radius: 11px;
+}
+
+.card span {
+	font-size: 0.84rem;
+}
+
+.card-header {
+	display: -webkit-box;
+	display: flex;
+	color: var(--Very-pale-orange);
+	padding: 0.85rem 1.3rem 1.38rem 1.1rem;
+	margin-bottom: 0.9rem;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: var(--Soft-red);
+}
+
+.card-header span {
+	color: var(--Cream);
+}
+.card-header h4 {
+	font-size: 1.32rem;
+	margin: 0.28rem 0 0.04rem 0;
+}
+.card-header img {
+	max-width: 60px;
+	margin-top: 0.5rem;
+}
+
+.card-main {
+	padding: 1.55rem 1.1rem 1.2rem 1.1rem;
+	border-radius: 10px;
+	background-color: var(--Very-pale-orange);
+}
+
+.card-main h3 {
+	font-size: 1.34rem;
+	margin: 0;
+}
+
+.card-chart {
+	max-width: 100%;
+	max-height: 200px;
+	margin: 1.85rem 0 1.25rem 0;
+	-webkit-transform: scaleX(1.04);
+					transform: scaleX(1.04);
+}
+
+.card-main-content {
+	display: -webkit-box;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-main-content span {
+	color: var(--Medium-brown);
+}
+.card-main-content h2 {
+	font-size: 1.65rem;
+	margin: 0.38rem 0 0.4rem 0;
+}
+
+.card-status {
+	text-align: right;
+	align-self: flex-end;
+}
+.card-status h6 {
+	font-size: 0.9rem;
+	line-height: 0.8;
+	margin: 0;
+}
+
+/* ---- h-line ---- */
+.h-line {
+	width: 100%;
+	height: 2px;
+	margin: 1.1rem 0;
+	background-color: var(--Cream);
+}
