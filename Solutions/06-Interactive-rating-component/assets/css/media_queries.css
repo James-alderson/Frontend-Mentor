@@ -1,0 +1,52 @@
+/* ---- Desktop Resolution ---- */
+@media (min-width: 600px) {
+	.card {
+		min-width: 370px;
+		padding: 1.8rem;
+		border-radius: 28px;
+	}
+	.card-img-container {
+		width: 43px;
+		height: 43px;
+		padding-top: 0;
+		margin-bottom: 2rem;
+	}
+	.card-img-star {
+		width: 15px;
+	}
+
+	.card-content h3 {
+		font-size: 1.55rem;
+		margin-bottom: 0.75rem;
+	}
+	.card-content p {
+		font-size: 0.84rem;
+		line-height: 1.6;
+	}
+
+	.card-img-thank {
+		margin: 0.75rem auto 1.8rem;
+	}
+	.card-selected {
+		font-size: 0.85rem;
+		padding: 0.33rem 1rem 0.18rem;
+		margin-bottom: 1.2rem;
+	}
+	.card-content-thank p {
+		max-width: 305px;
+		margin: 0.8rem auto 0.95rem;
+	}
+
+	.btn-group {
+		margin: 1.55rem 0 1.8rem;
+	}
+	.btn-rank {
+		width: 45px;
+		height: 45px;
+		font-size: 0.9rem;
+		padding-top: 0.2rem;
+	}
+	.btn-submit {
+		padding: 0.82rem 1rem 0.62rem;
+	}
+}

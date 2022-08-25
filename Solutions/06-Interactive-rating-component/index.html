@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Alderson">
+
+  <title>Interactive rating component</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media_queries.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+</head>
+<body>
+
+  <section class="card">
+    <div id="rankContent" class="card-content card-content-rank active">
+      <div class="card-img-container">
+        <img src="assets/images/icon-star.svg" alt="star icon" class="card-img-star">
+      </div>
+      <h3>How did we do?</h3>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+        offering!</p>
+      <div id="btnGroup" class="btn-group">
+        <button class="btn btn-rank">1</button>
+        <button class="btn btn-rank">2</button>
+        <button class="btn btn-rank">3</button>
+        <button class="btn btn-rank">4</button>
+        <button class="btn btn-rank btn-rank-colored">5</button>
+      </div>
+      <button id="submitBtn" class="btn btn-submit">Submit</button>
+    </div>
+    <div id="thankContent" class="card-content card-content-thank">
+      <img src="assets/images/illustration-thank-you.svg" alt="illustration thank you" width="144" height="96"
+        class="card-img-thank">
+      <span id="rankSelected" class="card-selected">You selected 4 out of 5</span>
+      <h3>Thank you!</h3>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+        touch!</p>
+    </div>
+  </section>
+
+  <script src="assets/js/reating.js"></script>
+</body>
+</html>
