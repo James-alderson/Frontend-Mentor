@@ -1,0 +1,27 @@
+/* ---- Desktop resolution ---- */
+@media (min-width: 600px) {
+	.card {
+		max-width: 485px;
+		padding: 1.8rem 2.8rem 2.55rem 2.8rem;
+		border-radius: 14px;
+	}
+
+	.card-content h6 {
+		font-size: 0.72rem;
+		letter-spacing: 3.8px;
+	}
+	.card-content h3 {
+		font-size: 1.55rem;
+		line-height: 1.38;
+		margin: 1.5rem 0 2.25rem 0;
+	}
+
+	.card-dice {
+		top: calc(100% - 28.6px);
+		padding: 1.1rem;
+	}
+	.card-dice img {
+		width: 22px;
+		height: 22px;
+	}
+}

@@ -1,0 +1,135 @@
+/* ------ Table of content ------
+
+1. Webfonts
+   1.1 Manrope
+2. Custom property
+3. Global styles
+4. Typography
+5. Components
+   5.1 card
+
+------------------------------ */
+
+/* ===============
+   Webfonts
+   =============== */
+/* ---- Manrope ---- */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/* ===============
+   Custom property
+   =============== */
+:root {
+	--Light-Cyan: hsl(193, 38%, 86%);
+	--Neon-Green: hsl(150, 100%, 66%);
+	--Grayish-Blue: hsl(217, 19%, 38%);
+	--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+	--Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* ===============
+   Global styles
+   =============== */
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+body {
+	display: grid;
+	height: 100vh;
+	place-items: center;
+	color: var(--Light-Cyan);
+	font-family: "Manrope", sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	background-color: var(--Dark-Blue);
+}
+
+/* ===============
+   Typography
+   =============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 800;
+	line-height: 1;
+	margin: 1rem 0;
+}
+
+/* ===============
+   Components
+   =============== */
+/* ---- card ---- */
+.card {
+	position: relative;
+	max-width: 340px;
+	padding: 1.62rem 1.5rem 2.5rem;
+	margin: 1rem;
+	border-radius: 10px;
+	background-color: var(--Dark-Grayish-Blue);
+}
+
+.card-content {
+	text-align: center;
+}
+
+.card-content h6 {
+	color: var(--Neon-Green);
+	font-size: 0.66rem;
+	letter-spacing: 3.7px;
+	text-transform: uppercase;
+}
+
+.card-content h3 {
+	font-size: 1.47rem;
+	line-height: 1.4;
+	margin: 1.6rem 0 1.5rem 0;
+}
+.card-content h3::before {
+	content: "\201C";
+}
+.card-content h3::after {
+	content: "\201D";
+}
+
+.card-content img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.card-content picture img {
+	margin: 1.5rem 0;
+}
+
+.card-dice {
+	position: absolute;
+	top: calc(100% - 32px);
+	left: 50%;
+	padding: 1.25rem;
+	cursor: pointer;
+	border-radius: 50%;
+	border: none;
+	-webkit-transform: translateX(-50%);
+	-webkit-transition: -webkit-box-shadow 0.3s ease-out;
+		 transform: translateX(-50%);
+		 transition: -webkit-box-shadow 0.3s ease-out;
+		 transition: box-shadow 0.3s ease-out;
+		 transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+	background-color: var(--Neon-Green);
+}
+.card-dice:hover,
+.card-dice:focus {
+	-webkit-box-shadow: 0 0 30px 0 var(--Neon-Green);
+					box-shadow: 0 0 30px 0 var(--Neon-Green);
+}
