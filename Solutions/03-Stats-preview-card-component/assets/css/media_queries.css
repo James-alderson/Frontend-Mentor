@@ -1,0 +1,63 @@
+/* ---- (custom) Tablet resolution ---- */
+@media (min-width: 600px) {
+	.card {
+		max-width: 750px;
+		flex-direction: row-reverse;
+	}
+
+	.card-img,
+	.card-content {
+		flex: 1 1 50%;
+	}
+	.card-img,
+	.card-img::after,
+	.card-img img {
+		border-radius: 0 5px 5px 0;
+	}
+
+	.card-content {
+		text-align: left;
+	}
+	.card-content p {
+		max-width: 230px;
+	}
+
+	.card-stats {
+		margin-top: 4.3rem;
+		flex-direction: row;
+	}
+	.card-stats > div {
+		flex: 1;
+	}
+}
+
+/* ---- Desktop resolution ---- */
+@media (min-width: 800px) {
+	.card {
+		max-width: 1000px;
+		border-radius: 9px;
+	}
+
+	.card-content {
+		padding: 3.5rem 4rem;
+	}
+	.card-content h3 {
+		font-size: 2.1rem;
+		line-height: 1.25;
+	}
+	.card-content p {
+		max-width: 330px;
+		font-size: 0.85rem;
+		margin: 1.5rem 0;
+		line-height: 1.8;
+	}
+
+	.card-stats h4 {
+		font-size: 1.45rem;
+		line-height: 1;
+		margin-bottom: 0.15rem;
+	}
+	.card-stats span {
+		font-size: 0.75rem;
+	}
+}
