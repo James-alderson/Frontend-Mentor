@@ -1,0 +1,32 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/placeholders" as *;
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	@extend %grid;
+	height: 100vh;
+	color: color(White);
+	place-items: center;
+	background-color: color(Very-dark-blue-m);
+}
+
+img {
+	display: block;
+}
+
+a {
+	color: color(White);
+	text-decoration: none;
+	@include transition(color 0.2s ease-in-out);
+	&:hover,
+	&:focus {
+		color: color(Cyan);
+	}
+}

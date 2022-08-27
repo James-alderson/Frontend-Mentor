@@ -1,0 +1,19 @@
+@use "./fonts" as *;
+
+$color: (
+	White: hsl(0, 0%, 100%),
+	Cyan: rgb(0, 255, 247),
+	Soft-blue: hsl(215, 51%, 70%),
+	Very-dark-blue-m: rgb(13, 25, 43),
+	Very-dark-blue-c: hsl(216, 50%, 16%),
+	Very-dark-blue-l: hsl(215, 32%, 27%),
+);
+
+$size: (
+	title: 1.375rem,
+	paragraph: 16.1px,
+);
+
+$font: (
+  outfit: ("Outfit", sans-serif)
+)

@@ -1,0 +1,18 @@
+@use "../abstracts/functions" as *;
+
+body {
+	font-family: font(outfit);
+}
+
+p {
+	font-size: size(paragraph);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}

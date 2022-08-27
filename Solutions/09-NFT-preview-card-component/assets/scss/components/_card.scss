@@ -1,0 +1,119 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+	max-width: 327px;
+	padding: 1.5rem;
+	border-radius: 0.9rem;
+	background-color: lighten(color(Very-dark-blue-c), 0.5%);
+	@include boxShadow(
+		0 28px 0 16px rgba(darken(color(Very-dark-blue-m), 2%), 0.5),
+		0 28px 0 48px rgba(darken(color(Very-dark-blue-m), 0.5%), 0.5)
+	);
+	.img-container {
+		display: inline-block;
+		position: relative;
+		margin: 0 0.05rem 0.55rem 0;
+		.img {
+			width: 100%;
+			height: 100%;
+			border-radius: 0.5rem;
+		}
+		.overlay {
+			@extend %vertical-center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			@extend %select-none;
+			visibility: hidden;
+			border-radius: 0.6rem;
+			justify-content: center;
+			@include transition(0.3s ease-in-out);
+			background-color: rgba(color(Cyan), 0.5);
+		}
+		&:hover .overlay,
+		&:focus .overlay {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.title {
+		font-size: size(title);
+		margin: 0.84rem 0;
+	}
+	.desc {
+		color: color(Soft-blue);
+		font-weight: 300;
+		line-height: 1.62;
+		margin: 0.84rem 0;
+	}
+	.pd-container {
+		@extend %vertical-center;
+		padding: 0.2rem 0 1.05rem;
+		@extend %horizontal-space;
+		border-bottom: 1px solid color(Very-dark-blue-l);
+		.price,
+		.date {
+			@extend %vertical-center;
+			font-size: 0.95rem;
+			@include columnGap(0.4rem);
+		}
+		.price {
+			color: color(Cyan);
+			font-weight: 600;
+		}
+		.date {
+			color: color(Soft-blue);
+			margin-right: 0.1rem;
+		}
+	}
+	.creator {
+		@extend %vertical-center;
+		color: color(Soft-blue);
+		font-weight: 300;
+		@include columnGap(1rem);
+		margin-top: 1rem;
+		span {
+			font-size: 0.96rem;
+		}
+		.avatar {
+			border-radius: 50%;
+			border: 1px solid color(White);
+		}
+	}
+}
+
+@include respond(small) {
+	.card {
+		max-width: 350px;
+		padding: 1.5rem 1.5rem 2rem;
+		.img-container {
+			margin: 0 0 0.22rem;
+		}
+		.title {
+			margin: 1.15rem 0;
+		}
+		.desc {
+			font-size: 1.13rem;
+			line-height: 1.44;
+			margin: 1.15rem 0;
+		}
+		.pd-container {
+			padding: 0.35rem 0 1.55rem;
+			.price,
+			.date {
+				font-size: 1.02rem;
+			}
+		}
+		.creator {
+			span {
+				font-size: 1.02rem;
+				margin-top: -0.1rem;
+			}
+		}
+	}
+}

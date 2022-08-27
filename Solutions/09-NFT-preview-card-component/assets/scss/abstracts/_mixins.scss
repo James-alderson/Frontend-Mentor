@@ -1,0 +1,25 @@
+@mixin respond($breakpoint) {
+	@if ($breakpoint == small) {
+		@media (min-width: 600px) {
+			@content;
+		}
+	}
+}
+
+/* ---- Vendor Prefixes ---- */
+@mixin boxShadow($shadow-a, $shadow-b) {
+	-webkit-box-shadow: $shadow-a, $shadow-b;
+					box-shadow: $shadow-a, $shadow-b;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+			 -o-transition: $transition;
+					transition: $transition;
+}
+
+@mixin columnGap($gap) {
+	-webkit-column-gap: $gap;
+		 -moz-column-gap: $gap;
+					column-gap: $gap;
+}
