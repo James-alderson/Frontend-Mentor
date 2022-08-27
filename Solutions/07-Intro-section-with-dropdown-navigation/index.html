@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Alderson">
+  <meta name="description" content="Intro section with dropdown navigation">
+
+  <title>Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <script src="assets/js/navMenu.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img src="assets/images/logo.svg" alt="Company logo" class="company-logo" width="78" height="25">
+      </a>
+      <nav id="navTop" class="nav-top">
+        <button id="btnNav__close" class="btn btn-nav" aria-label="close navigation menu">
+          <img src="assets/images/icon-close-menu.svg" alt="" class="nav-icon" width="26" height="26">
+        </button>
+        <div class="nav-menu">
+          <div class="dropdown">
+            <button class="btn btn-dropdown" aria-label="features dropdown">
+              Features
+              <svg width="10" height="6" class="arrow arrow-up" aria-label="hidden">
+                <path stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"></path>
+              </svg>
+              <svg width="10" height="6" class="arrow arrow-down" aria-label="hidden">
+                <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+            <div class="dropdown-content dropdown-features">
+              <ul class="dropdown-list">
+                <li class="dropdown-list-item">
+                  <img src="assets/images/icon-todo.svg" alt="todo">
+                  <a href="#todo_list">Todo List</a>
+                </li>
+                <li class="dropdown-list-item">
+                  <img src="assets/images/icon-calendar.svg" alt="calendar">
+                  <a href="#calendar">Calendar</a>
+                </li>
+                <li class="dropdown-list-item">
+                  <img src="assets/images/icon-reminders.svg" alt="reminders">
+                  <a href="#reminders">Reminders</a>
+                </li>
+                <li class="dropdown-list-item">
+                  <img src="assets/images/icon-planning.svg" alt="planning">
+                  <a href="#planning">Planning</a>
+                </li>
+              </ul>
+            </div>
+          </div> <!-- dropdown-a End -->
+          <div class="dropdown">
+            <button class="btn btn-dropdown" aria-label="company dropdown">
+              Company
+              <svg width="10" height="6" class="arrow arrow-up" aria-label="hidden">
+                <path stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"></path>
+              </svg>
+              <svg width="10" height="6" class="arrow arrow-down" aria-label="hidden">
+                <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+            <div class="dropdown-content dropdown-company">
+              <ul class="dropdown-list">
+                <li><a href="#history">History</a></li>
+                <li><a href="#our_team">Our Team</a></li>
+                <li><a href="#blog">Blog</a></li>
+              </ul>
+            </div>
+          </div> <!-- dropdown-b End -->
+          <a href="#careers">Careers</a>
+          <a href="#about">About</a>
+        </div> <!-- nav-menu End -->
+        <div class="nav-logReg">
+          <a href="#login">Login</a>
+          <a href="#register" class="btn btn-dark-outline">Register</a>
+        </div>
+      </nav>
+      <button id="btnNav__open" class="btn btn-nav" aria-label="open navigation menu">
+        <img src="assets/images/icon-menu.svg" alt="open menu" class="nav-icon" width="32" height="18">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-img">
+          <picture>
+            <source srcset="assets/images/image-hero-desktop.png" media="(min-width: 800px)">
+            <img src="assets/images/image-hero-mobile.png" alt="A standing man working with a laptop">
+          </picture>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Make remote work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+              productivity soar.</p>
+            <a href="#learn_more" class="btn btn-dark">Learn more</a>
+          </div>
+          <div class="hero-companyLogos">
+            <img src="assets/images/client-databiz.svg" alt="databiz">
+            <img src="assets/images/client-audiophile.svg" alt="audiophile">
+            <img src="assets/images/client-meet.svg" alt="meet">
+            <img src="assets/images/client-maker.svg" alt="maker">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="navDarkShadow" class="dark-shadow"></div>
+
+</body>
+</html>
