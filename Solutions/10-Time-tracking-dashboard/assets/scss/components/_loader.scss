@@ -1,0 +1,17 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.loader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	background: color(Very-dark-blue) url("../images/loader.gif") no-repeat center;
+}
+.loader.hidden {
+	opacity: 0;
+	visibility: hidden;
+	@include transition(0.5s ease-in-out)
+}

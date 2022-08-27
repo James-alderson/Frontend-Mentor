@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Alderson">
+  <meta name="description" content="Time tracking dashboard">
+
+  <title>Time tracking dashboard</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="preload" as="image" type="image/gif" href="assets/images/loader.gif">
+  <script src="assets/js/dashboard.min.js" defer></script>
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+</head>
+<body>
+
+  <div class="loader"></div>
+
+  <main>
+    <section class="dashboard">
+      <div class="dashboard__card dashboard__card--user">
+        <div class="dashboard__user-info">
+          <img src="assets/images/image-jeremy.png" alt="Jeremy Robson" width="70" height="70">
+          <div class="dashboard__user-text">
+            <span class="dashboard__report dashboard__report--text">Report for</span>
+            <h1 class="dashboard__report dashboard__report--user-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="dashboard__content dashboard__content--user">
+          <div class="dashboard__timeframes">
+            <button id="timeframeDaily" class="dashboard__btn">Daily</button>
+            <button id="timeframeWeekly" class="dashboard__btn dashboard__btn--active">Weekly</button>
+            <button id="timeframeMonthly" class="dashboard__btn">Monthly</button>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--work">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Work</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--play">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Play</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--study">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Study</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--exercise">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Exercise</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--social">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Social</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__card dashboard__card--self-care">
+        <div class="dashboard__content">
+          <div class="dashboard__row">
+            <span class="dashboard__report dashboard__report--title">Self Care</span>
+            <button class="dashboard__btn dashboard__btn--view-more" aria-label="view-more">
+              <svg width="21" height="5" aria-hidden="true">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0
+                 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="dashboard__report dashboard__report--content">
+            <h2 class="dashboard__duration dashboard__duration--current">...</h2>
+            <span class="dashboard__duration dashboard__duration--previous">...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

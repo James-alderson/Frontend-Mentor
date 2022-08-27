@@ -1,0 +1,224 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.dashboard {
+	display: grid;
+	width: min(calc(100vw - 1rem), size(dashboard-small));
+	gap: 1.5rem;
+	margin: 1rem 0.5rem;
+	&__card {
+		position: relative;
+		border-radius: 1rem;
+		background-color: color(Dark-blue);
+		&--work {
+			background: color(Light-red-w) url(../images/icon-work.svg) 93% -13.5%;
+		}
+		&--play {
+			background: color(Soft-blue) url(../images/icon-play.svg) 91.5% -6.5%;
+		}
+		&--study {
+			background: color(Light-red-s) url(../images/icon-study.svg) 93% -9.5%;
+		}
+		&--exercise {
+			background: color(Lime-green) url(../images/icon-exercise.svg) 93% -1.5%;
+		}
+		&--social {
+			background: color(Violet-color) url(../images/icon-social.svg) 95% -25.5%;
+		}
+		&--self-care {
+			background: color(Soft-orange) url(../images/icon-self-care.svg) 94.4% -12%;
+		}
+	}
+
+	&__user-info {
+		display: flex;
+		padding: 2rem 1.8rem 1.95rem;
+		gap: 2.15rem 1.08rem;
+		align-items: center;
+		border-radius: 0.9rem 0.9rem 1rem 1rem;
+		background-color: color(Blue-color);
+		img {
+			border-radius: 50%;
+			border: 3px solid color(White-color);
+		}
+	}
+
+	&__user-text {
+		margin-top: 0.3rem;
+	}
+
+	&__content {
+		padding: 1.55rem 2.13rem 1.55rem;
+		border-radius: 1rem;
+		background-color: color(Dark-blue);
+	}
+
+	&__report {
+		&--text {
+			color: color(Pale-Blue);
+			font-size: 0.93rem;
+		}
+		&--user-name {
+			font-size: 1.5rem;
+			margin: 0.3rem 0;
+		}
+		&--title {
+			font-size: 1.17rem;
+			letter-spacing: 0.04px;
+		}
+		&--content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 1rem;
+		}
+	}
+
+	&__timeframes {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__duration {
+		&--current {
+			font-size: 1.98rem;
+			margin: 0.48rem 0;
+		}
+		&--previous {
+			color: color(Pale-Blue);
+			font-size: 0.94rem;
+		}
+	}
+	&__card:not(&__card--user) {
+		height: 160px;
+		background-repeat: no-repeat;
+		.dashboard__content {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 1.7rem 1.5rem 1.35rem;
+			cursor: pointer;
+			border-radius: 0.95rem 0.95rem 0.8rem 0.8rem;
+			@include transition(background 0.3s ease-out);
+			&:hover {
+				background-color: lighten(color(Dark-blue), 13%);
+			}
+		}
+	}
+}
+
+@include respond(small) {
+	.dashboard {
+		width: initial;
+		max-width: size(dashboard-large);
+		gap: 1.88rem;
+		grid-template-areas:
+			"user work"
+			"user play"
+			"study exercise"
+			"social selfCare";
+		&__card {
+			width: 255px;
+			&--user {
+				grid-area: user;
+			}
+			&--work {
+				grid-area: work;
+				background-position: 90.5% -6.5%;
+			}
+			&--play {
+				grid-area: play;
+				background-position: 88% -3%;
+			}
+			&--study {
+				grid-area: study;
+				background-position: 90% -4%;
+			}
+			&--exercise {
+				grid-area: exercise;
+				background-position: 90% -0.5%;
+			}
+			&--social {
+				grid-area: social;
+				background-position: 92.5% -10.5%;
+			}
+			&--self-care {
+				grid-area: selfCare;
+				background-position: 92% -6%;
+			}
+		}
+		&__user-info {
+			padding: 2.1rem 1.8rem 4.8rem;
+			align-items: flex-start;
+			flex-direction: column;
+			img {
+				width: 84px;
+				height: 84px;
+			}
+		}
+		&__user-text {
+			margin-left: 0.2rem;
+		}
+		&__content {
+			padding: 1.62rem 2rem 2rem;
+		}
+		&__report {
+			&--user-name {
+				font-size: 2.5rem;
+				line-height: 1.2;
+				margin: 0.2rem 0;
+			}
+			&--content {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: stretch;
+			}
+		}
+
+		&__timeframes {
+			align-items: flex-start;
+			justify-content: stretch;
+			flex-direction: column;
+			row-gap: 1.35rem;
+		}
+		&__duration {
+			&--current {
+				font-size: 3.48rem;
+				margin: 1.6rem 0 0.6rem 0;
+			}
+			&--previous {
+				font-size: 0.935rem;
+			}
+		}
+		&__card:not(&__card--user) {
+			height: 244px;
+			.dashboard__content {
+				padding: 1.8rem 1.85rem 2rem;
+			}
+		}
+	}
+}
+
+@include respond(medium) {
+	.dashboard {
+		grid-template-areas:
+			"user work play"
+			"user study exercise"
+			"social selfCare .";
+	}
+}
+
+@include respond(large) {
+	.dashboard {
+		grid-template-areas:
+			"user work play study"
+			"user exercise social selfCare";
+	}
+}

@@ -1,0 +1,52 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+button {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.dashboard__btn {
+	color: color(Desaturated-blue);
+	font-size: 1.13rem;
+	padding: 0;
+	border: none;
+	@include transition(color 0.2s ease-out);
+	background-color: transparent;
+	&:not(:disabled):hover,
+	&:not(:disabled):focus,
+	&:not(:disabled).dashboard__btn--active {
+		color: color(White-color);
+		outline-color: transparent;
+	}
+	&:disabled {
+		opacity: 0.4;
+		cursor: wait;
+	}
+	&--active:disabled {
+		opacity: 0.8;
+	}
+
+	&--view-more {
+		padding: 0.1rem;
+		margin-top: 0.2rem;
+		margin-right: -0.1rem;
+		svg {
+			fill: color(Pale-Blue);
+			@include transition(fill 0.2s ease-out)
+		}
+		&:hover svg,
+		&:focus svg {
+			fill: color(White-color);
+		}
+	}
+}
+
+@include respond(small) {
+	.dashboard__btn {
+		&--view-more {
+			margin-top: 0;
+			margin-right: -0.05rem;
+		}
+	}
+}

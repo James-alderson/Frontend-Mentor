@@ -1,0 +1,22 @@
+@mixin respond($breakpoint) {
+	@if ($breakpoint == small) {
+		@media (min-width: 560px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == medium) {
+		@media (min-width: 845px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == large) {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+@mixin transition($property-duration-timing_function) {
+	-webkit-transition: $property-duration-timing_function;
+					transition: $property-duration-timing_function;
+}

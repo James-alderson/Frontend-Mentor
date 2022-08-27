@@ -1,0 +1,22 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	height: 100vh;
+	color: color(White-color);
+	overflow: hidden;
+	place-items: center;
+	background-color: color(Very-dark-blue);
+}
+
+img,
+svg {
+	display: block;
+}
