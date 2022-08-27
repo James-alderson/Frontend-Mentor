@@ -1,0 +1,16 @@
+@use "../abstracts/functions" as *;
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	height: 100vh;
+	place-items: center;
+	color: color(Dark-blue);
+	background-color: color(Light-gray);
+}

@@ -1,0 +1,19 @@
+@use "../abstracts/functions" as *;
+
+body {
+	font-family: font(outfit);
+}
+
+p {
+	font-size: size(paragraph);
+}
+
+.card {
+	.title {
+		font-size: size(heading-xxx);
+		line-height: 1.27;
+	}
+	.desc {
+		line-height: 1.23;
+	}
+}
