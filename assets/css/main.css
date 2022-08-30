@@ -334,6 +334,7 @@ template {
 body {
   color: hsl(36deg, 10%, 90%);
   font-family: "Josefin_Sans", sans-serif;
+  overflow: hidden;
   background-color: hsl(0deg, 0%, 0%);
 }
 
@@ -450,58 +451,6 @@ h1 {
   filter: grayscale(0);
 }
 
-@keyframes movementX {
-  0% {
-    object-position: left;
-  }
-  100% {
-    object-position: right;
-  }
-}
-@keyframes movementY {
-  0% {
-    object-position: top;
-  }
-  100% {
-    object-position: bottom;
-  }
-}
-#lightbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s ease-out;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-#lightbox.active {
-  cursor: zoom-out;
-  opacity: 1;
-  visibility: visible;
-}
-#lightbox img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  user-select: none;
-  border-radius: 1vw;
-  box-shadow: 0.3vw 0.3vw 0.3vw black;
-  animation: movementX 7s ease-in-out 0s infinite alternate;
-}
-@media screen and (min-width: 62rem) {
-  #lightbox img {
-    animation-name: movementY;
-    animation-duration: 4s;
-  }
-}
-
 header {
   position: fixed;
   top: 0;
@@ -570,6 +519,73 @@ header img {
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+@keyframes movementX {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@keyframes movementY {
+  0% {
+    object-position: top;
+  }
+  100% {
+    object-position: bottom;
+  }
+}
+#lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-out;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#lightbox.active {
+  cursor: zoom-out;
+  opacity: 1;
+  visibility: visible;
+}
+#lightbox img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  user-select: none;
+  border-radius: 1vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw black;
+  animation: movementX 7s ease-in-out 0s infinite alternate;
+}
+@media screen and (min-width: 62rem) {
+  #lightbox img {
+    animation-name: movementY;
+    animation-duration: 4s;
+  }
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background: #000 url(../images/loading.gif) no-repeat center;
+}
+#loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-out;
 }
 
 /*# sourceMappingURL=main.css.map */
