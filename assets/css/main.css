@@ -346,4 +346,13 @@ svg {
   display: block;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(30, 169, 127, 0.95);
+}
+
 /*# sourceMappingURL=main.css.map */

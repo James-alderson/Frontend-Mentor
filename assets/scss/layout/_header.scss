@@ -1,0 +1,16 @@
+@use "sass:color";
+@use "../abstracts/functions" as *;
+
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: change-color(
+		color(secondary),
+		$saturation: 70%,
+		$lightness: 39%,
+		$alpha: 0.95
+	);
+}
