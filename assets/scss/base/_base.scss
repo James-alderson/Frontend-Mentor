@@ -33,3 +33,50 @@ img {
 main {
 	margin-top: 5rem;
 }
+
+// Custom Scrollbar
+::-webkit-scrollbar {
+	width: initial;
+	height: initial;
+}
+::-webkit-scrollbar-track {
+	background-color: #060608;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #686869;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #555556;
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: #333335;
+}
+::-webkit-scrollbar-button {
+	width: initial;
+	height: initial;
+	background-color: #0a0a0d;
+}
+
+/* Up */
+::-webkit-scrollbar-button:vertical:decrement {
+	background: url(../images/arrows/up.png) no-repeat center / cover;
+}
+/* Down */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../images/arrows/down.png) no-repeat center / cover;
+}
+/* Left */
+::-webkit-scrollbar-button:horizontal:decrement {
+	background: url(../images/arrows/left.png) no-repeat center / cover;
+}
+/* Right */
+::-webkit-scrollbar-button:horizontal:increment {
+	background: url(../images/arrows/right.png) no-repeat center / cover;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:active,
+::-webkit-scrollbar-button:vertical:increment:active,
+::-webkit-scrollbar-button:horizontal:decrement:active,
+::-webkit-scrollbar-button:horizontal:increment:active {
+	background-color: #17171a;
+}

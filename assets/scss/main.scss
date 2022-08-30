@@ -2,3 +2,21 @@
 @use "./abstracts";
 @use "./components";
 @use "./layout";
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-delay: -1ms !important;
+		animation-duration: 3s !important;
+		animation-timing-function: steps(4, end) !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
+
+	#loading {
+		display: none;
+	}
+}

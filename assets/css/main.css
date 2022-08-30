@@ -359,6 +359,60 @@ main {
   margin-top: 5rem;
 }
 
+::-webkit-scrollbar {
+  width: initial;
+  height: initial;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #060608;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #686869;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555556;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #333335;
+}
+
+::-webkit-scrollbar-button {
+  width: initial;
+  height: initial;
+  background-color: #0a0a0d;
+}
+
+/* Up */
+::-webkit-scrollbar-button:vertical:decrement {
+  background: url(../images/arrows/up.png) no-repeat center/cover;
+}
+
+/* Down */
+::-webkit-scrollbar-button:vertical:increment {
+  background: url(../images/arrows/down.png) no-repeat center/cover;
+}
+
+/* Left */
+::-webkit-scrollbar-button:horizontal:decrement {
+  background: url(../images/arrows/left.png) no-repeat center/cover;
+}
+
+/* Right */
+::-webkit-scrollbar-button:horizontal:increment {
+  background: url(../images/arrows/right.png) no-repeat center/cover;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:active,
+::-webkit-scrollbar-button:vertical:increment:active,
+::-webkit-scrollbar-button:horizontal:decrement:active,
+::-webkit-scrollbar-button:horizontal:increment:active {
+  background-color: #17171a;
+}
+
 h1 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   max-width: 310px;
@@ -586,6 +640,23 @@ header img {
   opacity: 0;
   visibility: hidden;
   transition: 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-delay: -1ms !important;
+    animation-duration: 3s !important;
+    animation-timing-function: steps(4, end) !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+  #loading {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
