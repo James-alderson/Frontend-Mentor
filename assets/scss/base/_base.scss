@@ -1,0 +1,22 @@
+@use "../abstracts/functions" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: color(light-clr);
+	font-family: font(Josefin_Sans);
+	background-color: color(primary);
+}
+
+:focus {
+	outline: none;
+}
+
+img,
+svg {
+	display: block;
+}
