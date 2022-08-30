@@ -341,9 +341,165 @@ body {
   outline: none;
 }
 
+::selection {
+  background-color: rgba(32, 203, 152, 0.4);
+}
+
 img,
 svg {
   display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  max-width: 310px;
+}
+@media screen and (min-width: 36rem) {
+  h1 {
+    max-width: 410px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline 0.2s ease-out;
+}
+.card:focus-visible {
+  outline-color: hsl(162deg, 73%, 46%);
+}
+.card:focus-visible .shine::before {
+  left: 125%;
+  transition: 0.5s linear;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, hsla(162deg, 73%, 46%, 0.3) 100%);
+}
+.card:focus-visible .card__img {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+.card__img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(1);
+  cursor: zoom-in;
+  transition: transform 0.55s ease-out, filter 0.6s ease-out;
+}
+.card__content {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  padding: 0.2rem;
+  align-items: center;
+  column-gap: 0.5rem;
+  justify-content: flex-start;
+  border-top-right-radius: 5px;
+}
+.card__content a {
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  border-radius: 50%;
+  transition: outline 0.2s ease-out;
+}
+.card__content a svg {
+  fill: rgba(32, 203, 152, 0.5);
+}
+.card__content a:focus-visible {
+  outline-color: rebeccapurple;
+}
+.card__content a:hover svg, .card__content a:focus-visible svg {
+  fill: rgba(32, 203, 152, 0.8);
+}
+
+.shine {
+  position: relative;
+}
+.shine::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  cursor: zoom-in;
+  transition: 0.3s linear;
+  transform: skewX(-25deg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, hsla(162deg, 73%, 46%, 0.1) 100%);
+}
+.shine:hover::before {
+  left: 125%;
+  transition: 0.5s linear;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, hsla(162deg, 73%, 46%, 0.3) 100%);
+}
+.shine:hover .card__img {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+@keyframes movementX {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@keyframes movementY {
+  0% {
+    object-position: top;
+  }
+  100% {
+    object-position: bottom;
+  }
+}
+#lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-out;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#lightbox.active {
+  cursor: zoom-out;
+  opacity: 1;
+  visibility: visible;
+}
+#lightbox img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  user-select: none;
+  border-radius: 1vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw black;
+  animation: movementX 7s ease-in-out 0s infinite alternate;
+}
+@media screen and (min-width: 62rem) {
+  #lightbox img {
+    animation-name: movementY;
+    animation-duration: 4s;
+  }
 }
 
 header {
@@ -351,8 +507,69 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 9;
   padding: 1rem;
   background-color: rgba(30, 169, 127, 0.95);
+}
+header img {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  header img {
+    margin: initial;
+  }
+}
+
+.container {
+  max-width: 400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 36rem) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .container {
+    max-width: 1000px;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+@media screen and (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 62rem) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

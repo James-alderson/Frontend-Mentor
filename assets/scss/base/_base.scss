@@ -16,7 +16,19 @@ body {
 	outline: none;
 }
 
+::selection {
+	background-color: rgba(color(secondary), 0.4);
+}
+
 img,
 svg {
 	display: block;
+}
+
+img {
+	max-width: 100%;
+}
+
+main {
+	margin-top: 5rem;
 }
