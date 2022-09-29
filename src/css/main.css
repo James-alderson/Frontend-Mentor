@@ -1,0 +1,11 @@
+.bg-primary {
+	background-color: #8bceda !important;
+}
+
+.shadow {
+	transition: 0.25s ease-out;
+}
+
+.card:hover {
+	box-shadow: none !important;
+}
